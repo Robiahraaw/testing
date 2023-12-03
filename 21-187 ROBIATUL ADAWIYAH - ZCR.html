@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '21-187 ROBIATUL ADAWIYAH - ZCR';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/potoclear.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/potoclear.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Hi, I’m Robiatul Adawiyah
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Robiahraaw/testing/blob/master/docs/21-187 ROBIATUL ADAWIYAH - ZCR.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Robiahraaw/testing" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Robiahraaw/testing/issues/new?title=Issue%20on%20page%20%2F21-187 ROBIATUL ADAWIYAH - ZCR.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/21-187 ROBIATUL ADAWIYAH - ZCR.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>Klasifikasi Emosi Pada Audio</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">librosa</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">kurtosis</span><span class="p">,</span> <span class="n">skew</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daftar nama file audio</span>
+<span class="n">audio_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;a02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;a03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;a04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;a05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;d01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;d02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;d03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;d04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;d05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;f01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;f02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;f03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;f04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;f05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;h01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;h02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;h03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;h04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;h05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;n01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;n02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;n03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;n04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;n05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;sa01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;sa02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;sa03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;sa04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;sa05.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;su01.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;su02.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;su03.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;su04.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;su05.wav&#39;</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daftar Label</span>
+<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;angry&#39;</span><span class="p">,</span> <span class="s1">&#39;angry&#39;</span><span class="p">,</span> <span class="s1">&#39;angry&#39;</span><span class="p">,</span> <span class="s1">&#39;angry&#39;</span><span class="p">,</span> <span class="s1">&#39;angry&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">,</span> <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;sad&#39;</span><span class="p">,</span> <span class="s1">&#39;sad&#39;</span><span class="p">,</span> <span class="s1">&#39;sad&#39;</span><span class="p">,</span> <span class="s1">&#39;sad&#39;</span><span class="p">,</span> <span class="s1">&#39;sad&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi list untuk menyimpan statistik ZCR</span>
+<span class="n">zcr_mean_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">zcr_median_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">zcr_std_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kurtosis_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">skewness_values</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop melalui setiap file audio</span>
+<span class="k">for</span> <span class="n">audio_file</span> <span class="ow">in</span> <span class="n">audio_files</span><span class="p">:</span>
+    <span class="c1"># Membaca file audio</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">audio_file</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># Menghitung ZCR</span>
+    <span class="n">zcr</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">zero_crossing_rate</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="c1"># Menghitung statistik ZCR</span>
+    <span class="n">zcr_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">zcr</span><span class="p">)</span>
+    <span class="n">zcr_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">zcr</span><span class="p">)</span>
+    <span class="n">zcr_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">zcr</span><span class="p">)</span>
+
+    <span class="c1"># Menghitung kurtosis dan skewness</span>
+    <span class="n">kurt</span> <span class="o">=</span> <span class="n">kurtosis</span><span class="p">(</span><span class="n">zcr</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+    <span class="n">skewness</span> <span class="o">=</span> <span class="n">skew</span><span class="p">(</span><span class="n">zcr</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+
+    <span class="c1"># Menambahkan statistik ZCR ke dalam list</span>
+    <span class="n">zcr_mean_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zcr_mean</span><span class="p">)</span>
+    <span class="n">zcr_median_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zcr_median</span><span class="p">)</span>
+    <span class="n">zcr_std_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zcr_std</span><span class="p">)</span>
+    <span class="n">kurtosis_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kurt</span><span class="p">)</span>
+    <span class="n">skewness_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">skewness</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-5-afd7aeac415b&gt;:4: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, sr = librosa.load(audio_file, sr=None)
+/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py:183: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">LibsndfileError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py</span> in <span class="ni">load</span><span class="nt">(path, sr, mono, offset, duration, dtype, res_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">175</span>             <span class="n">y</span><span class="p">,</span> <span class="n">sr_native</span> <span class="o">=</span> <span class="n">__soundfile_load</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py</span> in <span class="ni">__soundfile_load</span><span class="nt">(path, offset, duration, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span>         <span class="c1"># Otherwise, create the soundfile object</span>
+<span class="ne">--&gt; </span><span class="mi">208</span>         <span class="n">context</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">SoundFile</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/soundfile.py</span> in <span class="ni">__init__</span><span class="nt">(self, file, mode, samplerate, channels, subtype, endian, format, closefd)</span>
+<span class="g g-Whitespace">    </span><span class="mi">657</span>                                          <span class="nb">format</span><span class="p">,</span> <span class="n">subtype</span><span class="p">,</span> <span class="n">endian</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">658</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">mode_int</span><span class="p">,</span> <span class="n">closefd</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>         <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">seekable</span><span class="p">():</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/soundfile.py</span> in <span class="ni">_open</span><span class="nt">(self, file, mode_int, closefd)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1215</span>             <span class="n">err</span> <span class="o">=</span> <span class="n">_snd</span><span class="o">.</span><span class="n">sf_error</span><span class="p">(</span><span class="n">file_ptr</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1216</span>             <span class="k">raise</span> <span class="n">LibsndfileError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;Error opening </span><span class="si">{0!r}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1217</span>         <span class="k">if</span> <span class="n">mode_int</span> <span class="o">==</span> <span class="n">_snd</span><span class="o">.</span><span class="n">SFM_WRITE</span><span class="p">:</span>
+
+<span class="ne">LibsndfileError</span>: Error opening &#39;a01.wav&#39;: System error.
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-5-afd7aeac415b&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">for</span> <span class="n">audio_file</span> <span class="ow">in</span> <span class="n">audio_files</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="c1"># Membaca file audio</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">y</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">audio_file</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="c1"># Menghitung ZCR</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py</span> in <span class="ni">load</span><span class="nt">(path, sr, mono, offset, duration, dtype, res_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>                     <span class="s2">&quot;PySoundFile failed. Trying audioread instead.&quot;</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">183</span>                 <span class="n">y</span><span class="p">,</span> <span class="n">sr_native</span> <span class="o">=</span> <span class="n">__audioread_load</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>                 <span class="k">raise</span> <span class="n">exc</span>
+
+<span class="nn">&lt;decorator-gen-119&gt;</span> in <span class="ni">__audioread_load</span><span class="nt">(path, offset, duration, dtype)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/librosa/util/decorators.py</span> in <span class="ni">__wrapper</span><span class="nt">(func, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>             <span class="n">stacklevel</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="c1"># Would be 2, but the decorator adds a level</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> 
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="k">return</span> <span class="n">decorator</span><span class="p">(</span><span class="n">__wrapper</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py</span> in <span class="ni">__audioread_load</span><span class="nt">(path, offset, duration, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>         <span class="c1"># If the input was not an audioread object, try to open it</span>
+<span class="ne">--&gt; </span><span class="mi">239</span>         <span class="n">reader</span> <span class="o">=</span> <span class="n">audioread</span><span class="o">.</span><span class="n">audio_open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span> 
+<span class="g g-Whitespace">    </span><span class="mi">241</span>     <span class="k">with</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">input_file</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/audioread/__init__.py</span> in <span class="ni">audio_open</span><span class="nt">(path, backends)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>     <span class="k">for</span> <span class="n">BackendClass</span> <span class="ow">in</span> <span class="n">backends</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">127</span>             <span class="k">return</span> <span class="n">BackendClass</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>         <span class="k">except</span> <span class="n">DecodeError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span>             <span class="k">pass</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/audioread/rawread.py</span> in <span class="ni">__init__</span><span class="nt">(self, filename)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     def __init__(self, filename):</span>
+<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         self._fh = open(filename, &#39;rb&#39;)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">         try:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;a01.wav&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat DataFrame dengan fitur audio dan statistik ZCR</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Audio File&#39;</span><span class="p">:</span> <span class="n">audio_files</span><span class="p">,</span> <span class="s1">&#39;ZCR Mean&#39;</span><span class="p">:</span> <span class="n">zcr_mean_values</span><span class="p">,</span> <span class="s1">&#39;ZCR Median&#39;</span><span class="p">:</span> <span class="n">zcr_median_values</span><span class="p">,</span> <span class="s1">&#39;ZCR Std&#39;</span><span class="p">:</span> <span class="n">zcr_std_values</span><span class="p">,</span> <span class="s1">&#39;Kurtosis&#39;</span><span class="p">:</span> <span class="n">kurtosis_values</span><span class="p">,</span> <span class="s1">&#39;Skewness&#39;</span><span class="p">:</span> <span class="n">skewness_values</span><span class="p">,</span> <span class="s1">&#39;Labels&#39;</span><span class="p">:</span> <span class="n">label</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Audio File  ZCR Mean  ZCR Median   ZCR Std   Kurtosis  Skewness    Labels
+0     a01.wav  0.014184    0.012695  0.014070  14.747829  2.869768     angry
+1     a02.wav  0.021256    0.014648  0.033267  12.630321  3.269949     angry
+2     a03.wav  0.012181    0.000000  0.025567  24.830558  4.624687     angry
+3     a04.wav  0.028524    0.015625  0.042103   5.695578  2.350155     angry
+4     a05.wav  0.032794    0.017822  0.046650   3.396480  2.086817     angry
+5     d01.wav  0.006444    0.003906  0.007160  -0.458482  0.827882   disgust
+6     d02.wav  0.007950    0.001953  0.009604   0.388089  1.014207   disgust
+7     d03.wav  0.006752    0.000000  0.014750  14.463648  3.451158   disgust
+8     d04.wav  0.017394    0.012695  0.021591   3.268881  1.862826   disgust
+9     d05.wav  0.017484    0.009766  0.030575  10.152693  3.152929   disgust
+10    f01.wav  0.016987    0.009766  0.028154   7.738694  2.809047      fear
+11    f02.wav  0.017020    0.009766  0.024850   7.756270  2.490960      fear
+12    f03.wav  0.013838    0.000000  0.030283  16.730187  3.791733      fear
+13    f04.wav  0.021666    0.011719  0.032779   4.014855  2.179004      fear
+14    f05.wav  0.022400    0.014648  0.032796   6.961891  2.530221      fear
+15    h01.wav  0.008281    0.007812  0.007790  -1.106352  0.432023     happy
+16    h02.wav  0.014640    0.012207  0.018700   7.676987  2.371000     happy
+17    h03.wav  0.012823    0.000000  0.022577  13.713345  3.326786     happy
+18    h04.wav  0.016238    0.010742  0.022006   5.563078  2.264519     happy
+19    h05.wav  0.017932    0.012207  0.024544   5.647471  2.330079     happy
+20    n01.wav  0.005360    0.001953  0.006262   0.057581  0.973268   neutral
+21    n02.wav  0.005334    0.000977  0.006378  -0.860498  0.767572   neutral
+22    n03.wav  0.004618    0.000000  0.005994  -0.916608  0.802045   neutral
+23    n04.wav  0.004101    0.000000  0.005455  -0.160777  1.082669   neutral
+24    n05.wav  0.003179    0.000000  0.005206   1.815981  1.677616   neutral
+25   sa01.wav  0.005095    0.001953  0.005883  -0.363912  0.837694       sad
+26   sa02.wav  0.005147    0.000000  0.006632  -0.799262  0.862415       sad
+27   sa03.wav  0.004156    0.000000  0.006589   0.662346  1.389100       sad
+28   sa04.wav  0.005092    0.001953  0.005857  -0.739788  0.744186       sad
+29   sa05.wav  0.006598    0.004883  0.006790  -1.290525  0.441387       sad
+30   su01.wav  0.009311    0.008789  0.009695   0.389706  0.917868  surprise
+31   su02.wav  0.019206    0.011719  0.026569   5.845399  2.194310  surprise
+32   su03.wav  0.015736    0.000000  0.033701  13.779690  3.474320  surprise
+33   su04.wav  0.019203    0.012207  0.027977   8.430559  2.728713  surprise
+34   su05.wav  0.021602    0.005859  0.042885   6.882420  2.769574  surprise
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

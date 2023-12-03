@@ -1,0 +1,1966 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Glioma Prediction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Glioma Prediction';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Klasifikasi Emosi Audio" href="21-187ROBIATULADAWIYAH.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/potoclear.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/potoclear.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Hi, I’m Robiatul Adawiyah
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="21-187ROBIATULADAWIYAH.html">Klasifikasi Emosi Audio</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Glioma Prediction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Robiahraaw/testing/blob/master/docs/Glioma Prediction.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Robiahraaw/testing" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Robiahraaw/testing/issues/new?title=Issue%20on%20page%20%2FGlioma Prediction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Glioma Prediction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Glioma Prediction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">Deskripsi Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-fitur">Penjelasan Fitur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">Eksplorasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="glioma-prediction">
+<h1>Glioma Prediction<a class="headerlink" href="#glioma-prediction" title="Permalink to this heading">#</a></h1>
+<p>Glioma Prediction adalah prediksi tingkat tumor otak kedalam 2 jenis glioma, yaitu LGG (Lower-Grade Glioma/Tumor Otak Jinak) atau GBM (Glioblastoma Multiforme / Tumor Otak Ganas) prediksi ini memerlukan  beberapa informasi penderita Glioma. Informasi yang dimaksud seperti : Jenis Kelamin, Usia, Ras, Serta 20 Mutasi Genetik yang terjadi pada pasien, untuk mengetahui Mutasi Genetik yang terjadi, pasien harus melakukan tes genetik molekuler terlebih dahulu.</p>
+<p>Sehingga 23 kriteria ini dijadikan sebagai variabel dalam melakukan komputasi prediksi Tingkat Glioma.</p>
+<section id="deskripsi-dataset">
+<h2>Deskripsi Dataset<a class="headerlink" href="#deskripsi-dataset" title="Permalink to this heading">#</a></h2>
+<p>Data diambil dari repository UCI : <a class="reference external" href="https://archive.ics.uci.edu/dataset/759/glioma+grading+clinical+and+mutation+features+dataset">https://archive.ics.uci.edu/dataset/759/glioma+grading+clinical+and+mutation+features+dataset</a></p>
+<p>Data ini memiliki 23 Variabel yaitu : 3 variabel umum (gender, usia, dan ras) dan 20 variabel mutasi genetik. Data ini digunakan sebagai pembelajaran terhadap sistem, sehingga sistem dapat mengenali bagaimana mengklasifikasikan tingkat tumor otak.</p>
+</section>
+<section id="penjelasan-fitur">
+<h2>Penjelasan Fitur<a class="headerlink" href="#penjelasan-fitur" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Jenis Kelamin : terdapat 2 pilihan untuk mengisi form ini, yaitu Pria/Wanita.</p></li>
+<li><p>Usia saat di diagnosa : isikan dengan tipe angka sesuai umur pasien saat ini.</p></li>
+<li><p>Ras : isikan sesuai jenis kulit pasien. Terdapat 4 pilihan untuk mengisi form ini, yaitu Kulit Putih, Kulit Hitam, Asia, &amp; Alaska.</p></li>
+<li><p>Mutasi Isocitrate Dehydrogenase : Isocitrate Dehydrogenase (IDH) merupakan enzim dalam siklus asam sitrat yang terlibat dalam konversi isositrat menjadi alfa-ketoglutarat, menghasilkan NADH. Mutasi pada gen IDH, terutama IDH1 dan IDH2, telah terkait dengan beberapa jenis kanker, seperti glioma otak. Mutasi ini menghasilkan oncometabolit 2-hydroxyglutarate, yang dapat memodulasi proses epigenetik dan menyebabkan perubahan kanker. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Tumor Protein : Dalam konteks onkologi, mutasi p53 sering dihubungkan dengan perjalanan kanker yang agresif dan resistensi terhadap berbagai bentuk terapi. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi ATRX Chromatin Remodeler : Mutasi dalam gen ATRX bisa membuat tumor tumbuh dengan cara mengubah cara kerja gen tertentu dan sifat sel, memainkan peran dalam perkembangan kanker dan pertumbuhan sel ganas. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Phosphatase and Tensin Homolog : Mutasi pada Phosphatase and Tensin Homolog (PTEN) adalah perubahan dalam gen yang dapat memengaruhi pertumbuhan sel dan menghubungkan dengan risiko pengembangan kanker. Mutasi dalam gen ini dapat menyebabkan kehilangan fungsi normalnya, memungkinkan sel untuk berkembang dengan cepat dan tanpa kendali. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Epidermal Growth Factor Receptor : EGFR adalah protein yang berperan dalam mengatur pertumbuhan dan pembelahan sel. Mutasi dalam gen ini dapat mengubah normalitas kontrol pertumbuhan sel, menyebabkan sel-sel tumbuh lebih cepat dan menjadi lebih rentan terhadap pembentukan tumor. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Capicua Transcriptional Repressor : CIC berperan dalam mengendalikan ekspresi gen dengan cara menekan aktivitas transkripsi atau pembentukan RNA dari gen-gen tertentu. Mutasi dalam gen CIC dapat mengakibatkan kehilangan fungsi normalnya, yang dapat menyebabkan gangguan dalam kontrol genetik seluler. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Mucin 16, Cell Surface Associated : Mutasi pada Mucin 16, Cell Surface Associated (MUC16) adalah perubahan genetik yang terkait dengan perubahan pada protein ini yang terdapat di permukaan sel. MUC16 dikenal sebagai protein membran sel yang berpartisipasi dalam berbagai proses biologis, termasuk interaksi sel-sel dan respons imun. Mutasi dalam gen MUC16 dapat menyebabkan perubahan yang tidak normal pada struktur atau fungsi protein. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Phosphatidylinositol-4,5-bisphosphate 3-kinase Catalytic Subunit Alpha : Mutasi pada Phosphatidylinositol-4,5-bisphosphate 3-kinase Catalytic Subunit Alpha (PIK3CA) adalah perubahan genetik yang terjadi pada subunit katalitik protein ini. PIK3CA berperan dalam regulasi berbagai jalur sinyal seluler, termasuk yang terlibat dalam pertumbuhan sel dan proliferasi. Mutasi dalam gen PIK3CA dapat mengakibatkan aktivitas berlebihan dari protein ini, memicu pertumbuhan sel yang tidak terkontrol dan berkontribusi pada perkembangan kanker. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Neurofibromin 1 : Mutasi pada Neurofibromin 1 (NF1) adalah perubahan genetik yang terjadi pada gen NF1. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Phosphoinositide-3-kinase Regulatory Subunit 1 : Mutasi pada Phosphoinositide-3-kinase Regulatory Subunit 1 (PIK3R1) adalah perubahan genetik yang terjadi pada subunit pengatur protein phosphoinositide-3-kinase (PI3K). Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Far Upstream Element Binding Protein 1 :Mutasi pada Far Upstream Element Binding Protein 1 (FUBP1) adalah perubahan genetik yang terjadi pada gen FUBP1. FUBP1 berperan dalam mengatur ekspresi gen dan mempengaruhi proses pertumbuhan dan pembelahan sel. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi RB Transcriptional Corepressor 1 : Mutasi RB Transcriptional Corepressor 1 (atau biasa disebut dengan mutasi dalam gen RB1) adalah perubahan atau kelainan pada materi genetik yang disebut RB Transcriptional Corepressor 1. Gen ini berperan dalam mengatur pertumbuhan sel dan mencegah terjadinya pertumbuhan sel yang tidak terkendali. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Notch Receptor 1 : Notch Receptor 1 adalah semacam “penyaring” atau “reseptor” di dalam sel tubuh kita. Mutasi Notch Receptor 1 berarti ada perubahan atau kesalahan dalam informasi genetik atau “kode” yang membentuk Notch Receptor 1 ini. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi BCL6 Corepressor : Mutasi BCL6 Corepressor merupakan perubahan pada bagian gen yang terlibat dalam mengendalikan pertumbuhan sel B. Perubahan ini dapat mempengaruhi cara gen tersebut berfungsi, dan hal ini dapat memiliki dampak pada sistem kekebalan tubuh dan kesehatan secara keseluruhan. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi CUB and Sushi Multiple Domains 3 : Merupakan mutasi pada gen tertentu dapat menyebabkan pertumbuhan sel yang tidak terkendali atau resistensi terhadap pengobatan. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi SWI/SNF Related, Matrix Associated, Actin Dependent Regulator of Chromatin, Subfamily a, Member 4 : Merupakan mutasi atau perubahan dalam regulator ini dapat memengaruhi bagaimana sel glioma tumbuh dan berkembang. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Glutamate Ionotropic Receptor NMDA Type Subunit 2A : Mutasi ini dapat mengubah cara sel tumor di otak berkomunikasi satu sama lain melalui zat kimia tertentu, yaitu glutamat. Perubahan ini dapat memiliki konsekuensi dalam pertumbuhan dan perilaku sel glioma. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Isocitrate Dehydrogenase (NADP(+)) 2 : Mutasi ini dapat memengaruhi cara kerja enzim yang disebut Isocitrate Dehydrogenase 2. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi FAT Atypical Cadherin 4 :  Merupakan perubahan pada gen tertentu yang disebut FAT Atypical Cadherin 4 yang terjadi dalam jenis tumor otak yang disebut glioma. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+<li><p>Mutasi Platelet-Derived Growth Factor Receptor Alpha : Mutasi PDGFRA dalam glioma bisa dianggap sebagai “kesalahan” genetik yang membuat sel-sel otak berkembang dengan cara yang tidak normal. Terdapat 2 pilihan untuk mengisi form ini, yaitu Bermutasi/Tidak Bermutasi.</p></li>
+</ol>
+</section>
+<section id="eksplorasi-data">
+<h2>Eksplorasi Data<a class="headerlink" href="#eksplorasi-data" title="Permalink to this heading">#</a></h2>
+<p><strong>Import Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RidgeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Load Data</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data</span>
+<span class="n">url_data</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/Robiahraaw/Data-PSD-Robi/main/glioma.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url_data</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-7c0238a1-5c39-41bb-80f1-19689506d4a0" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Grade</th>
+      <th>Gender</th>
+      <th>Age_at_diagnosis</th>
+      <th>Race</th>
+      <th>IDH1</th>
+      <th>TP53</th>
+      <th>ATRX</th>
+      <th>PTEN</th>
+      <th>EGFR</th>
+      <th>CIC</th>
+      <th>...</th>
+      <th>FUBP1</th>
+      <th>RB1</th>
+      <th>NOTCH1</th>
+      <th>BCOR</th>
+      <th>CSMD3</th>
+      <th>SMARCA4</th>
+      <th>GRIN2A</th>
+      <th>IDH2</th>
+      <th>FAT4</th>
+      <th>PDGFRA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>51.30</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>38.72</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>35.17</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>32.78</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>31.51</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>834</th>
+      <td>1</td>
+      <td>1</td>
+      <td>77.89</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>835</th>
+      <td>1</td>
+      <td>0</td>
+      <td>85.18</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>836</th>
+      <td>1</td>
+      <td>1</td>
+      <td>77.49</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>837</th>
+      <td>1</td>
+      <td>0</td>
+      <td>63.33</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>838</th>
+      <td>1</td>
+      <td>0</td>
+      <td>76.61</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>839 rows × 24 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7c0238a1-5c39-41bb-80f1-19689506d4a0')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-7c0238a1-5c39-41bb-80f1-19689506d4a0 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-7c0238a1-5c39-41bb-80f1-19689506d4a0');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+<p><strong>Cek jumlah baris dan kolom</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(839, 24)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Cek jumlah masing-masing kelas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Grade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    487
+1    352
+Name: Grade, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Plot bar menampilkan jumlah sampel tiap kelas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Grade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">class_count</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">class_count</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LGG&#39;</span><span class="p">,</span> <span class="s1">&#39;GBM&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Grade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Sampel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Jumlah Sampel Tiap Kelas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2347b0323c27686bbd571ef7455e74f0941109e259ed3a235e0ec50c2845625d.png" src="_images/2347b0323c27686bbd571ef7455e74f0941109e259ed3a235e0ec50c2845625d.png" />
+</div>
+</div>
+<p><strong>Periksa missing value</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">missing_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">missing_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grade               0
+Gender              0
+Age_at_diagnosis    0
+Race                0
+IDH1                0
+TP53                0
+ATRX                0
+PTEN                0
+EGFR                0
+CIC                 0
+MUC16               0
+PIK3CA              0
+NF1                 0
+PIK3R1              0
+FUBP1               0
+RB1                 0
+NOTCH1              0
+BCOR                0
+CSMD3               0
+SMARCA4             0
+GRIN2A              0
+IDH2                0
+FAT4                0
+PDGFRA              0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mendefinisikan Kolom Numerik</span>
+<span class="n">numerical_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age_at_diagnosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;IDH1&#39;</span><span class="p">,</span> <span class="s1">&#39;TP53&#39;</span><span class="p">,</span> <span class="s1">&#39;ATRX&#39;</span><span class="p">,</span> <span class="s1">&#39;PTEN&#39;</span><span class="p">,</span> <span class="s1">&#39;EGFR&#39;</span><span class="p">,</span> <span class="s1">&#39;CIC&#39;</span><span class="p">,</span> <span class="s1">&#39;MUC16&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;PIK3CA&#39;</span><span class="p">,</span> <span class="s1">&#39;NF1&#39;</span><span class="p">,</span> <span class="s1">&#39;PIK3R1&#39;</span><span class="p">,</span> <span class="s1">&#39;FUBP1&#39;</span><span class="p">,</span> <span class="s1">&#39;RB1&#39;</span><span class="p">,</span> <span class="s1">&#39;NOTCH1&#39;</span><span class="p">,</span> <span class="s1">&#39;BCOR&#39;</span><span class="p">,</span> <span class="s1">&#39;CSMD3&#39;</span><span class="p">,</span> <span class="s1">&#39;SMARCA4&#39;</span><span class="p">,</span> <span class="s1">&#39;GRIN2A&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;IDH2&#39;</span><span class="p">,</span> <span class="s1">&#39;FAT4&#39;</span><span class="p">,</span> <span class="s1">&#39;PDGFRA&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Features (X) Target (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">numerical_columns</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Grade&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Normalisasi</strong></p>
+<p>Normalisasi adalah suatu proses dalam pengolahan data yang bertujuan untuk mengubah nilai-nilai dari suatu variabel ke dalam skala tertentu tanpa mengubah distribusi relatif dari nilai-nilai tersebut. Salah satu metode normalisasi yang umum digunakan adalah menggunakan StandardScaler dari library scikit-learn di Python.</p>
+<p>Secara matematis, langkah-langkah yang dilakukan oleh <code class="docutils literal notranslate"><span class="pre">StandardScaler</span></code> adalah sebagai berikut:</p>
+<p><strong>Hitung rata-rata dan standar deviasi dari setiap fitur pada data pelatihan.</strong></p>
+<p><img alt="Screenshot 2023-11-27 062614.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYQAAABpCAYAAAA6EFQ7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABhaVRYdFNuaXBNZXRhZGF0YQAAAAAAeyJjbGlwUG9pbnRzIjpbeyJ4IjowLCJ5IjowfSx7IngiOjM4OCwieSI6MH0seyJ4IjozODgsInkiOjEwNX0seyJ4IjowLCJ5IjoxMDV9XX3CpQ5ZAAAoWklEQVR4Xu2dCZQU1dWAX4z+xuCWGHcSjKIoIomIEoyKigKRCCJGQBRBFISIiAJCUAPKrgYV2ZRN0LBKFIISkQhClICiAgkoi0CUJUjIhLAYE+t/36XeUFPTPdNLdc90z/3OqTPdVT29vKp6d7/vG57FKIqiKBWew/y/iqIoSgVHBYKiKIoiqEBQFEVRBBUIiqIoiqACQVEURRFUICiKoiiCpp0qOcuiRYvMBx984D8z5sILLzT16tXznxnDpT1v3jzz8ccf+3uMOfLII82NN95oTj75ZH+PoigOtRCUnKV27drmpptuMqtXrzZ9+/Y1zz//vPnnP//pHz1InTp1TOXKlc3MmTPNd77zHdO0aVNzwgkn+EcVRQmiAkHJWSpVqmSOOuooc/rpp5u77rrLLFy40Hz00Uf+UWv+fuMb5rvf/a750Y9+ZBo3bmxatWplTjvtNHP44Yf7r1AUJYgKBCWn+dvf/iYCoWXLluboo482r7/+uvnyyy/9owf57LPPzFlnnWX+7//+z9+jKEosVCBUIP7973/Llk988sknpkaNGua8884zV199tXnrrbfMp59+6h89yKpVq8w555zjP1MUJR4qEPIcAqv/+Mc/zO9//3vTpEkT8bfnC//5z3/M5s2bzfe//33z7W9/2/zsZz+TAPKCBQvkdwMCsKCgQF6jKErJqEDIYwiwdu3a1fTo0cP8+c9/NitWrPCP5Ad79uwxX3/9tfne974nzy+++GJz5ZVXmvnz55sdO3bIvt27d5tvfetb5phjjpHniqLER9NOKwhLly41jRo1kjTMn/zkJ/7e1Hn77bfNiBEjzFdffeXviZ7u3bubSy+91H9WnA8//NAsW7bMdOjQQZ5zKY8cOdL06dPHTJ482Vx//fXiQtq5c6e5+eab5TWKosRHBUIFIWqBwPuR2UNQ98QTTzS/+tWvzNlnn+0fLZ3//e9/Zt26deLOopYAVxbvFeTuu+82/fr1k9qBWEyfPl1SSoNCY+3ateb222+X7/Lss8+aSZMmmSuuuML8+Mc/9l+hKEo8VCBUEKIWCFw2TLa4pOCGG24wTz31lDn++OPlebLg+tmyZYuZOHGieeGFF8TVQ53BuHHjTJUqVfxXHYL4wdNPPy3ZRcH4ABlGv/71r82LL75oRo8eLcKmc+fOZVZ7QEzj0UcfNfv37/f3FAWBxnHGjd/EGHKuYnHnnXea6667zn+mKNGjMQQlJcjx/8UvfiGTFLzyyisymf/3v/+V58ly2GGHmTPOOEMKzP7whz9IxtB7770nrqlY/Otf/5LPcvEDB9YE34sU1MGDB4ugKcv4AcFuBPBPf/pTGbM//vGPsiGoyIxigue7AkL2Bz/4QZHXYTWRRXXVVVeZCy64QF6nKBkDC0HJf959913vuOOOk79Rsn79eq9+/fry3tWqVfMWLVrkH0mPHTt2eK1atfI6derk7d271997CDuhemPGjPGfFYXX8398p2nTpvl7yx4r4GSM+F6tW7f2rBXkHzmEFWDe2LFjPSsEvFmzZnlfffWVf0RRMo9aCEpaUPBF/AAtd/v27eL+2LBhg380dU466SRx/ZBWSq1BkAMHDogVwWfaa9jfewiXgsp3O//88/29ZY+rlYBwVbXjnXfeMRMmTBB3V7NmzbSqWskqKhCUtCFoS0YQ4OYZNWqU2bdvnzxPB4rJyA7605/+JBM/goDPOeWUU8ygQYMkNoArZePGjf5/HIIU1Msvv1xeW15wggqoj0CoETdwEG947LHHTLdu3UrMrlKUjCF2gpL3ZMpl5Ni5c6e4QfgMtokTJ4r7QynKtm3bvKZNm8oY4WrbtGmT7N+yZYvXokULb/r06TpuSpmhFoISCQR3e/fubapVqybPn3jiCXF/KEWh7fa1114rj13Q/O9//7t58MEHJfiMm4igsqKUBcXSTslqIGOEPHFyxMkPf+SRR0zNmjXlAp41a5b4dGklzMXLxU1mB9kcVvs0L730kviSMdXJ9sD0jZdHzkf/5S9/kSKi1157TVINuSlIJfz5z38uFaZBcEPMnTvXvPzyy1J5y+v5XhQg0cmSFL4g/AZaNtDbhsd//etfzZlnnmkeeOABea/Zs2dLVSvZKnzP5s2bF3uPfGHx4sUyToxzptwRnE/aTOPywCVCBg1plMQDlENQUMc1zn2CW4uOrKzlcM8992jMQClbEAhByN5o1KiRd/rppxea/3YS8Xr27OkNHjxYjpMt0b59eznWp08fb9euXV6vXr28AQMGFDvet29f78CBA/67H4LsCbJEqlat6g0cONCzN4e3Z88ecTXw2R07dhQ3hGP//v1ejx495D35P17LPj7LCibJyrATfBFzm+P9+/f3ateuXfhb7r33Xu/VV1/12rRp482ZM8dbt26dfCb/jwm/du1a/79zH37/fffdV/jbgxv7OR41wfPExvUR6/xXZIJZUGxWQYmZSaUo2SZuYRqZInZSFquAwh+sBBYjceasqwhFuyY/mn7zweNUobZr18588cUXZurUqUUqRflIp0m2bdvWPPzww4VWBO83bNgwY4WL5JHzHXhP935YLKx4RVGSyy/HyrjjjjvkMUVN5557rjx2YL0MHz5cslaoqmXRlN/85jeFmivWw5AhQ8zQoUONFXxivn/zm9+UY4nAd3rzzTf9Z+lB73768eSy24A+QlbwFmYCcT6D14ZijFVGzG233SaPU7nmFCUTxI0h4BKy2os8ZrKnU2bwhmYyxb2C4CB7gtcEj1MZir8UszicBbJ+/XqZ0AHXUNClhMmMGwqXE1W1rkkZPe9xJzHBXHTRRfKZDtxATPJkaeC2CkPR06mnniqPuekQREE3BvuspSKPeQ+rrcnjRDniiCNSupn5LbgKqMh1Gwu45PrEyXlHIKBI4DriXIdTRysyKD3B1FwK0FizIVlwe/JeihIZWAixwA1kNXExaadMmeLvPUQyx8PFQePHj5f9DRo0kOyKMGRiWAEjRTy4oBxWkxdXUTgLI+gasZq+v7cofAeOk+ERdEU53HG+M99dSQ/O0ahRo2RM2chAijXuFQ3GhUyi5s2be507dy4cn0mTJvmvSAyyxXBzjhgxwt+jKOmTUJYRGnZJlHY8CHnXuH8ArZFcclxAwY2mabiBsC7IPXfwOWjVuHh4jxkzZoibB1dSoi4bNPlkvm+uQC+cqLYowMpp06ZNYWsLgvu4Ce01J88rIvx2gvu4NXGJ4uZ0dRJYtsnUbnANX3LJJYUZS4oSBVmfGfHnW41eHpMhhDth7NixRTZumPfff19cTbVq1ZLXAjcMC6nXrVvXWOtCFkKpXr266dKli/SKqciw9kFUW1Tg1kO4O3cYRWQVOY5AGi69mqjsJj03WLmM22jNmjXyOBEQBjT+S6bDrKKURpmoys7fTrwAjZS0u3ibWweXXG2sCRZ7IYZA9Srl/cQgEBostq6UT0gfpo21q1GoiDDZU11NJbJL+w1WLmMNE4TH+lWUsiLrAoHJgSAw7Nq1KyGNlJsEy4H6CPK2yRYi+BoPTHO6YQbbAmQSajPCbpdUN3oBZXLRmWyCEGcCJBstE7UPWJsErTPlhuK92dKFRAWC7LHGwa3yBokElz///HNz//33y1oRUfSMUpQgZWIhYCajLZJtFF4UxUFfe9JOKeJhqUTXCAzXUGn9aVxP/GwtGUkG1qZNm8TFle7Wq1cvyVpKBwoKn3vuOSkKY+Mx+4KgkbK6mHsNGxpqVODeI76DqygT1bcoCSyAw/vHahKXKgiXKNegdkKReEqscYhVuRwP3osUbtxOZHDRMyoYY1OUdCkTgYDfs3Xr1qJ9oV3HCqYhLNhINyWA5qqW0frRDIOQmrpq1Sr/WfZJxPWV6OZcZOlw7LHHSlM4xpnJgzx3XGxB+Cx8+owxkx6W12WXXeYfTQ9SIRFCwPKWmaq+5ZqgQp0meFGAtRrlGtQoCcS3UH74nrHGAQERVHIQyvGsZmJmWBNc/7igOIfpKg+KEuSbdsLo6z8WcONwIzDBUgfAcxYuYaIiGMxNyHG0MnecHH+Oo5m741ywb7zxhmg17jiaPj1viCFQzEa+P4ExJnmCw2QQATcSWhUBSYrMXGsMTGq0aP7XLSRC4RvaLXUPWBMIEL7vokWLJL6ABUIRHc8JVFeqVEm0K9peMInT1oKMJnec74k7CpcTx6OYoLONE6CMB/GWbdu2yVgjANwEwjngXJCthfAgDhPFb0XDRsizlrFbCSwT8Bv5bUyQUU2KjBk+/aZNm4p/n1XXbr311oTbmaCtc+0jYMeMGSPFZjym5oUJn79BocD9wn1GhhH/xzW3detWGTOO8ZxJn98K3B+4W3FB8f4IL+4DRYkMewMXgfxmlxsd3sjx/+STTzyr0aR0PNwugZYGM2bM8OrWrSvHrfnvWU3VsxOXt3Tp0iL1BrS6mDlzpryW1ha017ATvmwsykJ9gr0BC99n/vz5nrU84rZu4DvyXfnOJR3PVeyE4g0dOlR+A+NCTQdtPoIwZnbS9qxQ9fekz5IlS6SGJKoWIPyOgoKCYrUnmcbdB/xNlJLuHeoOwuO8cuVKqSWI9Xq2WP9jrS9pERNvgR1FSYdiAqEsoOCMYjBuEFbKKmmVKI5xk1gLRP6H/3XwmJuESaSiwxjRewqhuHDhQhGiTCRMKI4NGzZ4gwYNimy8EAIIA4RCFCAEnn32WSlkdLAPBeCWW24RYZ6pHkCpCIRs4NpnMy7ZFpJK/lMmMYQwmMSYxriCwmZ1GI7hHsKVFDSngce56uaJGlxltB8hHdf1RwpnsbAaGS6IKMYrExlF1rqR7qzk3DvI5Sdm9OSTT0pcBLelAxeLncCNFUgJb7g27X3gv0P5Z/ny5eICrF+/vowDdTzZyqZT8p9yIRCU6GEyrVGjhjxGSDZs2LBYFgvxgygCspnIKELAULtAvKdKlSqyj89BIJCVQ/ol8SSUAwfpumQfJQO++mT/pyxBgNH/ilgZY0EPL1WAlKhQgZCHoDGi/TOZOljmkgnbZbGQ4YWGGXxNKjBJ0wkXosgoQlsnYYE8e6wDJjyXbEAgnNYmZFEtXbpUsnec0AOEA5lSyWx04U33O2cTMpJIGX788cdNQUGBnFNFiQoVCHkI2Vxff/21ZBE5yJSh/oP8evrpoIGTneNaiKeCSy8lM4bU1mAH2mRBiJHlxSIxdM7FvcUi+UF3Edlm7OO7s7ARWVO4DSsSCAQWoSKDiR5euSTMlPJP3PUQlNyFdNNly5aJxh6ECZf6DwQD6ZWkEZNymgpcNm5NC1bGc26dZMBVwyp2W7ZsEd94GFYVYylOZyE4SBFGcEycOFFSTx2kQONSSQbeGysjPLFigTRq1EhiFLRdV5SKgAqEPIRqVvLTw8Fd/OVUcNMChAl8yJAhRRYuSgYmTOpE4lWaRwEL66AFB3G/gQAywgJBgmBj8mYfNSXJxARcgkI47qECQamIqEDIM3C9kHmCdh0rPoB2jZXAJEdxUzAomwwUYRE/yCRo7+GAKW0lEEQUHbZo0UJcVhSPBd1jUZCNNagVpbyhAiGP4FSiIaM5k/UTXBXOQUAZdwvZRX369CnsPJsrELeghxGuIdJqCTIH4wzpgJDr3bu3mTBhgr/nEFgqdCulmllR8hUVCHkCrhNSPoPdOcn+oTNmmMmTJ0uANtX4QVlDwBz3EEFsTblUlOhQgaAoiqIImnaqKIqiCCoQFEVRFEFdRjkIwc3w+gaKoihhKERNBhUIOQhFZW4BHEVRlHjQniUZVCDkGDStI82S9g2aYaMoSpRoDCHHoLCMgjMVBoqiRI0KhBzDVRoriqJEjbqMcgiat7HYDQvA0w9fURQlStRCyCGwDipVqqTCQFGUjKACIYdAINDUTVEUJROoyyiHoFX1+PHjTa1atfw9FRtab9PK27W7puPpTTfdVKQBnVuXOQiLzFx88cX+M0VRHGoh5AhvvfWWdCpVYXCIk08+WQLsCIC+ffua/v37S7fXIKwLgQBg8X1SdVlb+oILLvCPKooSRAVCjrBw4UJTv359/5kCpN7SApvF9Vk0h06vrBkdXCAHYYEAYFW0Tp06mfPOO09bWCtKHFQg5AhYCCxVmQ5MmMH22PkA60djObEuwpVXXilrMX/22Wf+0YNwnHUfTjzxRH+PoiixUIGQA7Cc47p162RJx2QhRMQqY/Q0adKkiVm9erV/JD/YsWOHOf7448U1hDvovffeM2+//bZ/9CDEGliMXy0DRSkZFQg5ANlFqbiL0Iy7du1qevToIbULK1as8I/kD+vXrzdVq1aVNZGvuOIKU7t2bXEb8dsdLOSf6trRilKRUIGQA6DxNmjQwH+WOGjOzzzzjBk3bpxp3Lixvzd/wPr59NNPzVlnnSXPK1eubK6++mqJt3z00UeyjzWmCSZns3aDZT6nTp0qGVCKkggrV66UZW+TcelynW3dulUSKfbu3evvTQ9NOy3nrF27VrJkmNTSWf8YtxMup3nz5skC++ny8ccfm0cffdTs37/f3xM9LVu2LHGZT5bRfPrpp8UKOvbYY2Xf+++/L5lHN9xwg+nXr5/ZvXu3pOqylGg2XEbcpHweLj4+n2U+FaU03FrhuDe5bo4++mj/SGxIp2btdFylxMxQgpo2bWp69eoliRapUq4FAtkjuAIOP/xwf0/F46mnnjLvvPOOmT59ur8nNaIWCBs2bDAdO3YUnz08/PDDpk6dOvI4UdDuEXS4dNCQmESDUITHTYKlEwtez++555575DqBffv2me7du0tw+aWXXpL1lxESd999txzPJNxKM2fOlM8dNWqUOfXUU/0jilI6XLusgw4oW/GUiZ07d4oidO+995qTTjpJ9rE+Ctc4rfH535SVHwRCeWHu3LmenbQ8a957xx13nGc1Y89KQv9oxaRZs2aenVz8Z6nz7rvvypjyNyoWLFhQeK4aNmzobd682T+SPHbi9rZv3+4NHz7cq1GjhrxntWrVPCtw/FcU57XXXpMtzOzZs+X/BwwY4I0dOzbS31wSq1ev9urWrSvXcSJMmzZNzm+8bfTo0f4rPc9qgd5dd90V83Vt27b1rHD1X6nkMmvXrvXq1avnWQVQ7olYcM1z31llybOWheyzlrp33333yT3zwQcfyL5UKFcxBNICr7nmmqQ1zXxl27ZtEj/A/VEeIYiLNg5YIMQr0HJSAQ2fQjO0/TfffFPcRVZAFKsrcNhrVywEFz8Icvnll4t1MWXKFDN//vysxA8OHDhgrPAxNWvWlM9PBH4vY3jhhReKqwCrho2AOG7C4PvgLuS3Bl/HuGDtkXBwyimn+K9UcplzzjlH0suxAEiYiAexBixsvCiARYBFyj2DOyllDsqFaFi+fLnXv39/kVbpYM0ftRAs48eP9xo3buw/S49MWAhgzVevdevW8t5sU6dOjavZJMPevXu9Bx54wGvatKlnBaO/9xAFBQWeNY3lbywmTZok3wetKd3rMREWLlwoWhvWSbIwXmh7bgx5HGsM+a3OSlizZk0k46yUPzi3l1xyiVi4zgIIYpUPb8WKFd6OHTv8PZ68rl+/fnL9WGXB35s8kVoIGzduNF988YX/LHUOO0yTnwDtOJXsomxC/6DevXsba6rKc9pHkOKaLvhPe/bsKX+tCezvPYidCCV2QX1FvGvFpaCisWc6mPzll1+a119/XVJbU+mRhHWElu/GEKuG+oogLliNZjh69Ghz7rnnFsZNlPzihz/8obnqqqvECgwXWcKRRx4pVqWLHwBxBdLKiSFQlZ8qkc28VriIQFCigeydVOsPsk316tXFdURmBC4NXEcEi9OFC/7OO+8UtxmTLsyaNUuKzKhMnjBhgqSasi8M+xk7WlVkGkx3KslZ2jTVamg3CQAZI0EhyL31u9/9ThQEMlCCE4GSfzDh07MMpScR5YrrgxTnzz//3HTp0iWtivzIBAIaDX5kJRrQOCm4Ov/88/095Rc01euvv97ccsst8pzuomPGjBGtNl2oKxg0aJDcJIAgwMce3NgXBp87lksUGVWlQYYUabho7ammBvP70O5cuiHKAEKQm52YygsvvCAZZ2effbYcV/Ib7ntiRh9++KHU0pQEWYgoDCNGjDCXXnqpvzc1IhEI3PgU4qDZKNGANkgrhqhwwSfcLZkAt0y3bt0KA6EIBC5SJrR8hsAutSIEdQkIpgOr4dGPCbA4sDy42bEKgm65XIcA/IsvvigCjmIs6ka4XgAXCQHVFi1ayEbacdANvWXLFjNgwABRAvi/iRMniuuwJNz/4M4jhZkizeeee07qWMJwvSLc+/TpI25HXo/11rZtWxHMzlINglU8fPhw+T2kjfLdmMi515YtWya1Aezr3LmznNdY7xGGhAPWTiclO9b3dPBdcSEyZlioaWMHICb2R3r2ZHnXXHONBCrsjS7PrRTyHn/8cXmNvRk8O9jy3KUfWi1R0hEXL14sG2lUsSAgxjGC0ATJbr75Zs8OqHyuC4BW5KDyGWec4Vlz0X+WGi4VjbEMb5kKti5ZsqQwbbR+/fpxz3++QKC3TZs2kiq4YcMGf2/qcH+5c9ShQwdJKmBM84ndu3d7v/zlLwuvEzbmgd/+9rdex44dZf7gvnfzCinNmzZt8mbOnOndcccdxY4zRsxDYZhjCPLzOV27dpXUXK550jbZx7yzfv16/9UHYe7hWJMmTeTatZO3JE4888wz8ll8P54HIc0zmC7Pxmf07NnTGzx4sBwnfbp9+/ZybNiwYZ5V0Pz/js2+ffu8Ll26SBqznfT9vUXhu99///1FfjuJPfPmzfOfJU9MgcAFWKdOHTlBZHuAlVKelaryo4cMGSL7OLF8aQa2du3a8mMZTDJD2McWzKV28J5cAG6AOQlkkjCICAaXtZIvAmHgwIH+o8TggmcccxGyHay2Unhj3H777XKd5CvcjA0aNPCsBujt2rXL35s6LsOEseP+KCkfPddhcu7Ro4f81qpVq3rdu3cvnG+Ax506dZLj1FpYK6nI8aDCgyAN45ST8DXIeJINx/9ZS0CydhzMbexnC06sTOBktbE/XvYPEzRKEK/hc8Pnzp1bNh6XBIKI38t7xcoMJMPooYce8rZu3ervOYi1mDxrlfjPkqeYy4g8ciotyZjAL+yq5Y455hjTrl07qU51uF45BPVca2bqCHAfsY8t+HrAXHzssceMle4SiMQkxM+LyY0PlUBhOjnVQfMt3Q2XR7p+cMYSf3AyUH2bSmfT8gA+dALB9iaU5wS7MOujiCeUR7ie7SQlvv8oKuqDwWUggJyv2US4GclSgypVqkgNSrA6l8fWUpbHuE6sJVbkuMu9BxJaOBcOsm6YW5gPrrvuuiLV7ownvnbqncjowjXnoP4DVw1zUjBew7l1CR648Xj/MLSMsBO4PMYtRXfh4LnjXJLsgJsn+JmxYK0P953pVxSEORpXGzFba2mJO4qN+RpX3AknnOC/MnmKCQQGlQAx6W3hm5hBSdePSSrV5MmTjTWFpE9N+CbihLMMYqocccQRKQX2OAH4cElVdJvropkqc+fOlRPGiaNgJFEQCOU93bQkOIf4SxlDwMfJTZSPIAzwcZP5xDWULgUFBeLzBu5BkgsS8TkHsVqp/K9V+Pw95R8y1UrKnmLyRmjEI1y8SJt3xi5ebIfJG+EbnpwRCMuXLzezZ882Z555pr/3IC7FmUQG1uEoCRRqlwgRi9L+P0h4HmZ+oAiS7+mKFNkWL14sPb2Cwi9ZigkEJmi0Hfrno8EzmQUlL1WzTHKpwPsgkblYiaJzE0UNFwCTkTUlk9r4HzSzyy67rHBjpa1Us0asmSfv6Ug04E6qGRfctdde6+/JTVAcaCjHtYQwpL8K/Y/yDa7pZIR9STjND63ZBeddcDlRmBjRjBHGruNrIpCy2KFDh0JtM5WNIDBB1FTgPitJ+SrteJg1a9bIX+YaAvLh73rrrbdK/x8IT85YHgh37sMlS5aYkSNHylxIv65EyWQtFd/fZdiFt5dffjmtebXYt0bCYOpwI9OoC9cFkywRd9w85JdXqlTJf3VyYGZh+gHaQKYLhsoKJnVcZcGGaokKBLSaVLKL0Aqi2qICK4cbCRgT3IHJarsVBcYFSwoGDhxY6DJEg0UTTAbuq1atWiWV9YQQYolRhHiqG1lmNdIoiooSBAHQDZQMIzTq4EaRH65cXE3Mdw6sKqwL3J64q1irmww93DHZaJBY1sQUY7RRxYce9KGRa83ANmvWLGXzH20KEzvfIY7CZIhmglkKiQoEcvhTEQixtIVUt6jA2qQ2AR8uflliRCWZ0bkI2hjujnTAJUB3VO4xqrNRxvBXO/dseMGfkkCTRtNnjemgv700OC9UvwYt5GQ3/O7JfGYmca5oNHXin5yneJtTTBEGxD2Z/CkIQ4HBPUN79Xr16mV1TY2yIqZAYDDx42NSMTDDhg0TVxF+NxqKYdYmYibjyySHNl8DivHAl+fcai6vnPEqreqQhS5wD0RZf1Ae4KYkPzvdopnyCG4Mfh9+/1Qa+3GPYOZjQXFfOT96uHI5GfePYgor1Ddt2pSwMMUa4xywhgaWLXNeOMYZhIIx5rdMx2oIRGeLYgIBDZ6KNwLL+NHQUsguIlMEfyaTFRcoA10anAjMSOcDRRq7DCJuhEwMJOY1AxjLFZLshqblTM9kIPbgLAMnEIDAT0mgCeKaQ6PJB5xPHH82lmU6Afp48BmZUjiwaEubTFCScLfg8imtojQM1z/CABcG/ulgUDVYucw1WFpwmfeixQfFWox5KsIpn8Da4d5j7CgcjAVjhhWAVQ64sxEKWHwkvZR2vdI7CEssE25Qrj26HTNfZtPqKiYQ+HFMXM7XHwSfGjd2qjDJ0qMDECiZcB9ddNFF4gPEN5juRkotN2Q6cFG67JPS0k+56aPILiKw+OqrrxZJoQ0vrs95njZtWpHX4FeN6pwwSVMNCgjWkjStVCHhgewT9zlRgdbHuaI69Y033vD3xoZ4Gn5qqmVLqiiNBa5XWlIQm4uVvRercjkevBdK3JNPPimWPa6OigwT6W233Sb3LwkyjE0YrHaUW+caP+qoo+Qv94ar7HcgPFhoKVugXHBNkVmVThppssR0GQHaajzJR4+NsBbrJk4mI6f5u8nFvRb/JpkIaIycCKRxGCaSdHoiYb4jeMJ+wlS2KILe5CW7jBF+F+ZoLHDFUe4ehbuIMcDdgIbJeSQwRn5y8HySnotflJsAvynnlOCauynSgfNPDQduENexNBPwOynXjyojC62MOBnBVSbg8ApusWC8UJRQoMjUSQSsY84LK14RjCVFMRZcx87Nxr2yYMGCwnsrCNYAAoFx4DugzGRzEkkWrkMsecYYNyngcsPVyv79+/ebVatWFTnO2gAoqsHjLigcPM495qx6YqFcfwhIWlGghLrxI1V4yJAhsm4G6eVAawuekw3nOssC5wvFALcd9zLvw+dxvyJMmOfIRuLzXXdSvh/7OG+8D98reJx7g+8faw4Evt/mzZvF05DOkphJYweoCFRb3njjjVIlSZWxvUn8I55UxbVq1UqqC6kSDEJ/bqrzqMJj5Sg7iFINGK7qY78dXHktVclW6/GPHKxMpEScY1TosVE5SAsMO0D+q3IPfpP7PaySFYuRI0dGtvaBgyrvRx55RHrox6uOpAoyihXZglAhym/J5bYVjB2V8vHOVxB7o8u5jVUt66CylOt4ypQpnlWKilzfVpgUq0bmPrRKk7QmcK+lCnbOnDnyPqyg5v6He5QqWVrJsJZC8+bNy/X94uYY97uCG/utUIvbcqW04+HuBoyJFSzSWoLjzC2Mo1VKvVdeeUWOB2FcO3fuLPMfr6HbAq+nStlq7LJWC/t5L9brYB/3UPA7BDfOr7uW4h2PBZ/D8ZKuqUwQUyAw6Y8bN86zGoxMJAyKlZxe9erVCwcmDBcnvUbowcNGD6R27doVWcTBwWutdJUbg4HnZNHugr4dY8eO9azkLDZwscq3c4WVK1cW/g5adcSC3//EE0/4z6KBViBsbklJJovwxEOpe5RjixCIsv8OLQPoFxS+cTNNMgKBtiucP87tnj17/L1F4cZ310B4Gzp0aLHzMmbMmJivdVus/3HfI9Z5rugwHlxHKKsIFGul+EdiY7V66Z/EFlZ+ec57ZWqMeV/OYbU0l8NMhWICgRtw+/bthT+WgUFIsJU2iMBg8Vp6h5R2E7uThIaE4OCzgX08530yOfDZhN5Q3Mic5DBcdByzZqa/J30YM7QLa5IWThRsPHZwrugpFWyOlQ6cM/pQRdl/B2HGSlBBKxMtrlu3bjIBoxlngmQEAr+VG7hWrVoy4ZQVWBRowO+VsA61Uv5h7uQ+oo8TXpNsUiyGQPCP1qsuwk7QzPnUEynNx+/Oa/F/4uMtCT6DQjhSxMiwcIFH9vGc9+FxJrJTso2LIxDIwvcYhLa65HDbm9nfkz5UX1qBKsE1zif+ZeI2wSInMmgY23QW1HBkIqPIChiJfTB2rmKcwkh6ZREXobaB/H18/0D8ibHFd5voRmWt+/9U4beSDEA8gTG295V/JHvglycpgbHifsI/XdEDy7kKsQpS1Im3Zruuo+QZW4kMArgO2ncEQSCQ5hYlTKYIZQL6TFiu0IlJw6UkIpxImUw3eJ6JjCK+I9k3BOyCq54RWCXzxmrl0p4ApYEAOViLtFh2SGnwP8mmi8aCwCTtEFjYn4BjtmGcCIK7JTxZcQ3hrOQWKHJcQyhVZNBlnYOGgpJp8C1XrlxZXEMNGzb09x70+9pJTQKFUeLiBw4Cjw8++KC4rJxLIYr4AW4++rsTd8JlFAWbN28u7B0fdhdt3LhRXF38BtwjmYotJeMyctAiHjcWcTbn/swW7jxYgSznOd21NJTsg+sRdyvx17JKyFALIUuQlkt5P5CChkYHWAuuZUBU2PMqOeukkjpcoRMpcDNmzJCceVLg0inH53NIL6WrKwU6wcKqZMHKoIAIVxDWFH20IOguAtLwsAhI2yRPn2UrywtYYz169BCTP9urxWGVkcY6ZMgQaSRIOq6SW1glROpSuAew5suCbyAV/MdKhsHfTX8j4MQ3bdpU1g3AF96/f3/ZHwVM9iypRw8WYjAOYgb0nMe1QAM1/JTkwafqMiK/m4ZfuClq1qzp700ObgKEF3nbLu/bgZCkitdVtztwdfG5xEXoKOviFfjR6QfE30RB2NB5NzhOwBhRoc8kS5v2ZCCPncpj2pdYK8PfqyjxITb20EMPyZoPXDNRxOBSQQVCFqF4yRUa4W9mrVzaXDz//POyoEZUMMkSUOzSpUuxC2vOnDlSwckk3rx585Q7ODLp0dGVAptMgbCioChoIQC/AQGKUCVOMm3aNCkmI4mBiuywYCkJEiUQZmGhmI5AAOISxDNS7QysVCzKy/WiAiHL4A7BpYDWi0Cg1zpBZRcYjQICx4CLKIzTrpnIccuQ3ZQKXMDJTLypQIZFLOuFbCYqVAk643I77bTTUv4d8SBg3b59exEILVu29PcqSn6jMYQsE0w/ddlFUQoD3EIIhHg9mFwKKu0SaLmQKmjWZPhkcovnysKkZvwQCAUFBZFm0yBssDo4L1h0CE+eY03RW0ZR8hm1ELIMrhyncTLR0FSONrvpgiDAhUOw1UFfpDFjxsjnBCF4O2nSJGlJnW7KaVnhgvLqklGU6FCBkGX2798vcQOaV7GiFa133ULjiqIoZYm6jLIM1azObUSAWYWBoijlBRUIZYATCFFXJyuKoqSDCoQygDWGWcQ7H5eUVBQld9EYgqIoiiKohaAoiqIIKhAURVEUQQWCoiiKIqhAUBRFUSzG/D/8u+1nwY/nPAAAAABJRU5ErkJggg==" /></p>
+<p>Di sini, (N) adalah jumlah sampel dalam data pelatihan, dan (X_i) adalah nilai dari fitur pada sampel ke-(i).</p>
+<p><strong>Normalisasi setiap nilai ((X)) pada setiap fitur dengan menggunakan rumus standard score.</strong></p>
+<p><img alt="Screenshot 2023-11-27 062838.png" src="data:image/png;base64,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" /></p>
+<p>Rumus ini memberikan skala yang konsisten antar fitur, yang dapat meningkatkan performa algoritma pembelajaran mesin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normalisasi data menggunakan StandardScaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpan Standard Scaler ke dalam file pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;scaler_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">scaler_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">scaler</span><span class="p">,</span> <span class="n">scaler_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Reduksi Dimensi</strong></p>
+<p>Principal Component Analysis (PCA) adalah metode statistik yang digunakan untuk mereduksi dimensi data dengan memproyeksikan data ke dalam ruang fitur yang lebih rendah, yang disebut sebagai ruang komponen utama. Tujuannya adalah untuk mempertahankan sebanyak mungkin varians dalam data asli sambil mengurangi jumlah dimensi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reduksi dimensi menggunakan PCA</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># Anda bisa mengubah jumlah komponen sesuai kebutuhan</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpan PCA model ke dalam file pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;pca_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">pca_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pca</span><span class="p">,</span> <span class="n">pca_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penggunaan pycaret untuk mencari model terbaik</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pycaret
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -cipy (/usr/local/lib/python3.10/dist-packages)</span>
+Requirement already satisfied: pycaret in /usr/local/lib/python3.10/dist-packages (3.2.0)
+Requirement already satisfied: category-encoders&gt;=2.4.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.6.3)
+Requirement already satisfied: cloudpickle in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.2.1)
+Requirement already satisfied: deprecation&gt;=2.1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.0)
+Requirement already satisfied: imbalanced-learn&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.10.1)
+Requirement already satisfied: importlib-metadata&gt;=4.12.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (6.8.0)
+Requirement already satisfied: ipython&gt;=5.5.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.34.0)
+Requirement already satisfied: ipywidgets&gt;=7.6.5 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.7.1)
+Requirement already satisfied: jinja2&gt;=1.2 in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.1.2)
+Requirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.3.2)
+Requirement already satisfied: kaleido&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.2.1)
+Requirement already satisfied: lightgbm&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.1.0)
+Requirement already satisfied: markupsafe&gt;=2.0.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.3)
+Requirement already satisfied: matplotlib&lt;=3.6,&gt;=3.3.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.6.0)
+Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.2)
+Requirement already satisfied: numba&gt;=0.55.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.58.1)
+Requirement already satisfied: numpy&lt;1.27,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.23.5)
+Requirement already satisfied: pandas&lt;2.0.0,&gt;=1.3.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5.3)
+Requirement already satisfied: plotly-resampler&gt;=0.8.3.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.9.1)
+Requirement already satisfied: plotly&gt;=5.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.15.0)
+Requirement already satisfied: pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.0.4)
+Requirement already satisfied: psutil&gt;=5.9.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.5)
+Requirement already satisfied: pyod&gt;=1.0.8 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.1.2)
+Requirement already satisfied: requests&gt;=2.27.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.31.0)
+Requirement already satisfied: schemdraw==0.15 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.15)
+Requirement already satisfied: scikit-learn&lt;1.3.0,&gt;=1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.2.2)
+Requirement already satisfied: scikit-plot&gt;=0.3.7 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.3.7)
+Requirement already satisfied: scipy~=1.10.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.10.1)
+Requirement already satisfied: sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.21.1)
+Requirement already satisfied: statsmodels&gt;=0.12.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.14.0)
+Requirement already satisfied: tbats&gt;=1.1.3 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.1.3)
+Requirement already satisfied: tqdm&gt;=4.62.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.66.1)
+Requirement already satisfied: xxhash in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.4.1)
+Requirement already satisfied: yellowbrick&gt;=1.4 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5)
+Requirement already satisfied: wurlitzer in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.0.3)
+Requirement already satisfied: patsy&gt;=0.5.1 in /usr/local/lib/python3.10/dist-packages (from category-encoders&gt;=2.4.0-&gt;pycaret) (0.5.3)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from deprecation&gt;=2.1.0-&gt;pycaret) (23.2)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from imbalanced-learn&gt;=0.8.1-&gt;pycaret) (3.2.0)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata&gt;=4.12.0-&gt;pycaret) (3.17.0)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (67.7.2)
+Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.19.1)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.7.5)
+Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (5.7.1)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (3.0.41)
+Requirement already satisfied: pygments in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (2.16.1)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.2.0)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.1.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (4.9.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (5.5.6)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (0.2.0)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (3.6.6)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (3.0.9)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (1.2.0)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (4.45.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (1.4.5)
+Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (9.4.0)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (3.1.1)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (2.8.2)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (2.19.0)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (4.19.2)
+Requirement already satisfied: jupyter-core in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (5.5.0)
+Requirement already satisfied: llvmlite&lt;0.42,&gt;=0.41.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba&gt;=0.55.0-&gt;pycaret) (0.41.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&lt;2.0.0,&gt;=1.3.0-&gt;pycaret) (2023.3.post1)
+Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from plotly&gt;=5.0.0-&gt;pycaret) (8.2.3)
+Requirement already satisfied: dash&lt;3.0.0,&gt;=2.11.0 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.14.2)
+Requirement already satisfied: orjson&lt;4.0.0,&gt;=3.8.0 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (3.9.10)
+Requirement already satisfied: trace-updater&gt;=0.0.8 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.0.9.1)
+Requirement already satisfied: tsdownsample==0.1.2 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.1.2)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,&gt;=0.29 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (3.0.6)
+Requirement already satisfied: urllib3 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (2.0.7)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from pyod&gt;=1.0.8-&gt;pycaret) (1.16.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.6)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (2023.11.17)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: deprecated&gt;=1.2.13 in /usr/local/lib/python3.10/dist-packages (from sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (1.2.14)
+Requirement already satisfied: scikit-base&lt;0.6.0 in /usr/local/lib/python3.10/dist-packages (from sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (0.5.2)
+Requirement already satisfied: Flask&lt;3.1,&gt;=1.0.4 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.2.5)
+Requirement already satisfied: Werkzeug&lt;3.1 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (3.0.1)
+Requirement already satisfied: dash-html-components==2.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.0.0)
+Requirement already satisfied: dash-core-components==2.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.0.0)
+Requirement already satisfied: dash-table==5.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (5.0.0)
+Requirement already satisfied: typing-extensions&gt;=4.1.1 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (4.5.0)
+Requirement already satisfied: retrying in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.3.4)
+Requirement already satisfied: ansi2html in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.8.0)
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.5.8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wrapt&lt;2,&gt;=1.10 in /usr/local/lib/python3.10/dist-packages (from deprecated&gt;=1.2.13-&gt;sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (1.14.1)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.3.2)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.8.3)
+Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (23.1.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (2023.11.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.31.1)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.13.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.2.12)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.5.5)
+Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (4.0.0)
+Requirement already satisfied: itsdangerous&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.1.2)
+Requirement already satisfied: click&gt;=8.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (8.1.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyzmq&lt;25,&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.2.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.1.0)
+Requirement already satisfied: nbconvert&gt;=5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.5.4)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.8.2)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.18.0)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.19.0)
+Requirement already satisfied: nbclassic&gt;=0.4.7 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-server&gt;=1.8 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.24.0)
+Requirement already satisfied: notebook-shim&gt;=0.2.3 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.2.3)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (4.9.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (4.11.2)
+Requirement already satisfied: bleach in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.7.1)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.3.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.7.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.2.1)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (21.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (3.7.1)
+Requirement already satisfied: websocket-client in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.6.4)
+Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.16.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (2.5)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sniffio&gt;=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.3.0)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.2.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -cipy (/usr/local/lib/python3.10/dist-packages)</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pycaret.classification</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Langkah 1: Baca data dari file CSV</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Robiahraaw/Data-PSD-Robi/main/glioma.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Grade&#39;, &#39;Gender&#39;, &#39;Age_at_diagnosis&#39;, &#39;Race&#39;, &#39;IDH1&#39;, &#39;TP53&#39;, &#39;ATRX&#39;,
+       &#39;PTEN&#39;, &#39;EGFR&#39;, &#39;CIC&#39;, &#39;MUC16&#39;, &#39;PIK3CA&#39;, &#39;NF1&#39;, &#39;PIK3R1&#39;, &#39;FUBP1&#39;,
+       &#39;RB1&#39;, &#39;NOTCH1&#39;, &#39;BCOR&#39;, &#39;CSMD3&#39;, &#39;SMARCA4&#39;, &#39;GRIN2A&#39;, &#39;IDH2&#39;, &#39;FAT4&#39;,
+       &#39;PDGFRA&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Langkah 2: Pilih kolom-kolom yang perlu dinormalisasi</span>
+<span class="n">kolom</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age_at_diagnosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;IDH1&#39;</span><span class="p">,</span> <span class="s1">&#39;TP53&#39;</span><span class="p">,</span> <span class="s1">&#39;ATRX&#39;</span><span class="p">,</span> <span class="s1">&#39;PTEN&#39;</span><span class="p">,</span> <span class="s1">&#39;EGFR&#39;</span><span class="p">,</span> <span class="s1">&#39;CIC&#39;</span><span class="p">,</span> <span class="s1">&#39;MUC16&#39;</span><span class="p">,</span> <span class="s1">&#39;PIK3CA&#39;</span><span class="p">,</span> <span class="s1">&#39;NF1&#39;</span><span class="p">,</span> <span class="s1">&#39;PIK3R1&#39;</span><span class="p">,</span> <span class="s1">&#39;FUBP1&#39;</span><span class="p">,</span> <span class="s1">&#39;RB1&#39;</span><span class="p">,</span> <span class="s1">&#39;NOTCH1&#39;</span><span class="p">,</span> <span class="s1">&#39;BCOR&#39;</span><span class="p">,</span> <span class="s1">&#39;CSMD3&#39;</span><span class="p">,</span> <span class="s1">&#39;SMARCA4&#39;</span><span class="p">,</span> <span class="s1">&#39;GRIN2A&#39;</span><span class="p">,</span> <span class="s1">&#39;IDH2&#39;</span><span class="p">,</span> <span class="s1">&#39;FAT4&#39;</span><span class="p">,</span> <span class="s1">&#39;PDGFRA&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Langkah 3: Split data menjadi fitur (X) dan target (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Grade&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s1">&#39;Grade&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Langkah 4: Inisialisasi ekperimen PyCaret</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">setup</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Grade&#39;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">train_size</span><span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">normalize_method</span><span class="o">=</span><span class="s1">&#39;zscore&#39;</span><span class="p">,</span><span class="n">pca</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">pca_method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span><span class="n">pca_components</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">numeric_features</span><span class="o">=</span><span class="n">kolom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_cc77e_row8_col1, #T_cc77e_row12_col1, #T_cc77e_row14_col1 {
+  background-color: lightgreen;
+}
+</style>
+<table id="T_cc77e" class="dataframe">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_cc77e_level0_col0" class="col_heading level0 col0" >Description</th>
+      <th id="T_cc77e_level0_col1" class="col_heading level0 col1" >Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_cc77e_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_cc77e_row0_col0" class="data row0 col0" >Session id</td>
+      <td id="T_cc77e_row0_col1" class="data row0 col1" >8883</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_cc77e_row1_col0" class="data row1 col0" >Target</td>
+      <td id="T_cc77e_row1_col1" class="data row1 col1" >Grade</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_cc77e_row2_col0" class="data row2 col0" >Target type</td>
+      <td id="T_cc77e_row2_col1" class="data row2 col1" >Binary</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_cc77e_row3_col0" class="data row3 col0" >Original data shape</td>
+      <td id="T_cc77e_row3_col1" class="data row3 col1" >(839, 24)</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_cc77e_row4_col0" class="data row4 col0" >Transformed data shape</td>
+      <td id="T_cc77e_row4_col1" class="data row4 col1" >(839, 16)</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_cc77e_row5_col0" class="data row5 col0" >Transformed train set shape</td>
+      <td id="T_cc77e_row5_col1" class="data row5 col1" >(671, 16)</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_cc77e_row6_col0" class="data row6 col0" >Transformed test set shape</td>
+      <td id="T_cc77e_row6_col1" class="data row6 col1" >(168, 16)</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_cc77e_row7_col0" class="data row7 col0" >Numeric features</td>
+      <td id="T_cc77e_row7_col1" class="data row7 col1" >23</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_cc77e_row8_col0" class="data row8 col0" >Preprocess</td>
+      <td id="T_cc77e_row8_col1" class="data row8 col1" >True</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_cc77e_row9_col0" class="data row9 col0" >Imputation type</td>
+      <td id="T_cc77e_row9_col1" class="data row9 col1" >simple</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_cc77e_row10_col0" class="data row10 col0" >Numeric imputation</td>
+      <td id="T_cc77e_row10_col1" class="data row10 col1" >mean</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_cc77e_row11_col0" class="data row11 col0" >Categorical imputation</td>
+      <td id="T_cc77e_row11_col1" class="data row11 col1" >mode</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_cc77e_row12_col0" class="data row12 col0" >Normalize</td>
+      <td id="T_cc77e_row12_col1" class="data row12 col1" >True</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_cc77e_row13_col0" class="data row13 col0" >Normalize method</td>
+      <td id="T_cc77e_row13_col1" class="data row13 col1" >zscore</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_cc77e_row14_col0" class="data row14 col0" >PCA</td>
+      <td id="T_cc77e_row14_col1" class="data row14 col1" >True</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_cc77e_row15_col0" class="data row15 col0" >PCA method</td>
+      <td id="T_cc77e_row15_col1" class="data row15 col1" >linear</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_cc77e_row16_col0" class="data row16 col0" >PCA components</td>
+      <td id="T_cc77e_row16_col1" class="data row16 col1" >15</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_cc77e_row17_col0" class="data row17 col0" >Fold Generator</td>
+      <td id="T_cc77e_row17_col1" class="data row17 col1" >StratifiedKFold</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_cc77e_row18_col0" class="data row18 col0" >Fold Number</td>
+      <td id="T_cc77e_row18_col1" class="data row18 col1" >10</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row19" class="row_heading level0 row19" >19</th>
+      <td id="T_cc77e_row19_col0" class="data row19 col0" >CPU Jobs</td>
+      <td id="T_cc77e_row19_col1" class="data row19 col1" >-1</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row20" class="row_heading level0 row20" >20</th>
+      <td id="T_cc77e_row20_col0" class="data row20 col0" >Use GPU</td>
+      <td id="T_cc77e_row20_col1" class="data row20 col1" >False</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row21" class="row_heading level0 row21" >21</th>
+      <td id="T_cc77e_row21_col0" class="data row21 col0" >Log Experiment</td>
+      <td id="T_cc77e_row21_col1" class="data row21 col1" >False</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row22" class="row_heading level0 row22" >22</th>
+      <td id="T_cc77e_row22_col0" class="data row22 col0" >Experiment Name</td>
+      <td id="T_cc77e_row22_col1" class="data row22 col1" >clf-default-name</td>
+    </tr>
+    <tr>
+      <th id="T_cc77e_level0_row23" class="row_heading level0 row23" >23</th>
+      <td id="T_cc77e_row23_col0" class="data row23 col0" >USI</td>
+      <td id="T_cc77e_row23_col1" class="data row23 col1" >616d</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Langkah 5:Bandingkan model dan cari yang terbaik</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">()</span>
+
+<span class="n">best_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-8519ef63-3e07-4fc7-a5e2-72126e7118e6" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Initiated</th>
+      <td>. . . . . . . . . . . . . . . . . .</td>
+      <td>14:05:00</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>. . . . . . . . . . . . . . . . . .</td>
+      <td>Fitting 10 Folds</td>
+    </tr>
+    <tr>
+      <th>Estimator</th>
+      <td>. . . . . . . . . . . . . . . . . .</td>
+      <td>Extreme Gradient Boosting</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8519ef63-3e07-4fc7-a5e2-72126e7118e6')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-8519ef63-3e07-4fc7-a5e2-72126e7118e6 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-8519ef63-3e07-4fc7-a5e2-72126e7118e6');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div><div class="output text_html"><style type="text/css">
+#T_a6f80 th {
+  text-align: left;
+}
+#T_a6f80_row0_col0, #T_a6f80_row0_col1, #T_a6f80_row0_col2, #T_a6f80_row0_col3, #T_a6f80_row0_col4, #T_a6f80_row0_col5, #T_a6f80_row0_col6, #T_a6f80_row0_col7, #T_a6f80_row0_col8, #T_a6f80_row1_col0, #T_a6f80_row1_col1, #T_a6f80_row1_col2, #T_a6f80_row1_col3, #T_a6f80_row1_col4, #T_a6f80_row1_col5, #T_a6f80_row1_col6, #T_a6f80_row1_col7, #T_a6f80_row1_col8, #T_a6f80_row2_col0, #T_a6f80_row2_col1, #T_a6f80_row2_col2, #T_a6f80_row2_col3, #T_a6f80_row2_col4, #T_a6f80_row2_col5, #T_a6f80_row2_col6, #T_a6f80_row2_col7, #T_a6f80_row2_col8, #T_a6f80_row3_col0, #T_a6f80_row3_col1, #T_a6f80_row3_col2, #T_a6f80_row3_col3, #T_a6f80_row3_col4, #T_a6f80_row3_col5, #T_a6f80_row3_col6, #T_a6f80_row3_col7, #T_a6f80_row3_col8, #T_a6f80_row4_col0, #T_a6f80_row4_col1, #T_a6f80_row4_col2, #T_a6f80_row4_col3, #T_a6f80_row4_col4, #T_a6f80_row4_col5, #T_a6f80_row4_col6, #T_a6f80_row4_col7, #T_a6f80_row4_col8, #T_a6f80_row5_col0, #T_a6f80_row5_col1, #T_a6f80_row5_col2, #T_a6f80_row5_col3, #T_a6f80_row5_col4, #T_a6f80_row5_col5, #T_a6f80_row5_col6, #T_a6f80_row5_col7, #T_a6f80_row5_col8, #T_a6f80_row6_col0, #T_a6f80_row6_col1, #T_a6f80_row6_col2, #T_a6f80_row6_col3, #T_a6f80_row6_col4, #T_a6f80_row6_col5, #T_a6f80_row6_col6, #T_a6f80_row6_col7, #T_a6f80_row6_col8, #T_a6f80_row7_col0, #T_a6f80_row7_col1, #T_a6f80_row7_col2, #T_a6f80_row7_col3, #T_a6f80_row7_col4, #T_a6f80_row7_col5, #T_a6f80_row7_col6, #T_a6f80_row7_col7, #T_a6f80_row7_col8, #T_a6f80_row8_col0, #T_a6f80_row8_col1, #T_a6f80_row8_col2, #T_a6f80_row8_col3, #T_a6f80_row8_col4, #T_a6f80_row8_col5, #T_a6f80_row8_col6, #T_a6f80_row8_col7, #T_a6f80_row8_col8, #T_a6f80_row9_col0, #T_a6f80_row9_col1, #T_a6f80_row9_col2, #T_a6f80_row9_col3, #T_a6f80_row9_col4, #T_a6f80_row9_col5, #T_a6f80_row9_col6, #T_a6f80_row9_col7, #T_a6f80_row9_col8, #T_a6f80_row10_col0, #T_a6f80_row10_col1, #T_a6f80_row10_col2, #T_a6f80_row10_col3, #T_a6f80_row10_col4, #T_a6f80_row10_col5, #T_a6f80_row10_col6, #T_a6f80_row10_col7, #T_a6f80_row10_col8, #T_a6f80_row11_col0, #T_a6f80_row11_col1, #T_a6f80_row11_col2, #T_a6f80_row11_col3, #T_a6f80_row11_col4, #T_a6f80_row11_col5, #T_a6f80_row11_col6, #T_a6f80_row11_col7, #T_a6f80_row11_col8 {
+  text-align: left;
+}
+</style>
+<table id="T_a6f80" class="dataframe">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_a6f80_level0_col0" class="col_heading level0 col0" >Model</th>
+      <th id="T_a6f80_level0_col1" class="col_heading level0 col1" >Accuracy</th>
+      <th id="T_a6f80_level0_col2" class="col_heading level0 col2" >AUC</th>
+      <th id="T_a6f80_level0_col3" class="col_heading level0 col3" >Recall</th>
+      <th id="T_a6f80_level0_col4" class="col_heading level0 col4" >Prec.</th>
+      <th id="T_a6f80_level0_col5" class="col_heading level0 col5" >F1</th>
+      <th id="T_a6f80_level0_col6" class="col_heading level0 col6" >Kappa</th>
+      <th id="T_a6f80_level0_col7" class="col_heading level0 col7" >MCC</th>
+      <th id="T_a6f80_level0_col8" class="col_heading level0 col8" >TT (Sec)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_a6f80_level0_row0" class="row_heading level0 row0" >ridge</th>
+      <td id="T_a6f80_row0_col0" class="data row0 col0" >Ridge Classifier</td>
+      <td id="T_a6f80_row0_col1" class="data row0 col1" >0.8569</td>
+      <td id="T_a6f80_row0_col2" class="data row0 col2" >0.0000</td>
+      <td id="T_a6f80_row0_col3" class="data row0 col3" >0.8722</td>
+      <td id="T_a6f80_row0_col4" class="data row0 col4" >0.8046</td>
+      <td id="T_a6f80_row0_col5" class="data row0 col5" >0.8360</td>
+      <td id="T_a6f80_row0_col6" class="data row0 col6" >0.7095</td>
+      <td id="T_a6f80_row0_col7" class="data row0 col7" >0.7129</td>
+      <td id="T_a6f80_row0_col8" class="data row0 col8" >0.0940</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row1" class="row_heading level0 row1" >lda</th>
+      <td id="T_a6f80_row1_col0" class="data row1 col0" >Linear Discriminant Analysis</td>
+      <td id="T_a6f80_row1_col1" class="data row1 col1" >0.8554</td>
+      <td id="T_a6f80_row1_col2" class="data row1 col2" >0.8980</td>
+      <td id="T_a6f80_row1_col3" class="data row1 col3" >0.8722</td>
+      <td id="T_a6f80_row1_col4" class="data row1 col4" >0.8020</td>
+      <td id="T_a6f80_row1_col5" class="data row1 col5" >0.8346</td>
+      <td id="T_a6f80_row1_col6" class="data row1 col6" >0.7066</td>
+      <td id="T_a6f80_row1_col7" class="data row1 col7" >0.7101</td>
+      <td id="T_a6f80_row1_col8" class="data row1 col8" >0.0490</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row2" class="row_heading level0 row2" >lr</th>
+      <td id="T_a6f80_row2_col0" class="data row2 col0" >Logistic Regression</td>
+      <td id="T_a6f80_row2_col1" class="data row2 col1" >0.8465</td>
+      <td id="T_a6f80_row2_col2" class="data row2 col2" >0.9015</td>
+      <td id="T_a6f80_row2_col3" class="data row2 col3" >0.8443</td>
+      <td id="T_a6f80_row2_col4" class="data row2 col4" >0.8017</td>
+      <td id="T_a6f80_row2_col5" class="data row2 col5" >0.8212</td>
+      <td id="T_a6f80_row2_col6" class="data row2 col6" >0.6870</td>
+      <td id="T_a6f80_row2_col7" class="data row2 col7" >0.6895</td>
+      <td id="T_a6f80_row2_col8" class="data row2 col8" >0.6030</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row3" class="row_heading level0 row3" >gbc</th>
+      <td id="T_a6f80_row3_col0" class="data row3 col0" >Gradient Boosting Classifier</td>
+      <td id="T_a6f80_row3_col1" class="data row3 col1" >0.8405</td>
+      <td id="T_a6f80_row3_col2" class="data row3 col2" >0.9014</td>
+      <td id="T_a6f80_row3_col3" class="data row3 col3" >0.8404</td>
+      <td id="T_a6f80_row3_col4" class="data row3 col4" >0.7954</td>
+      <td id="T_a6f80_row3_col5" class="data row3 col5" >0.8162</td>
+      <td id="T_a6f80_row3_col6" class="data row3 col6" >0.6757</td>
+      <td id="T_a6f80_row3_col7" class="data row3 col7" >0.6779</td>
+      <td id="T_a6f80_row3_col8" class="data row3 col8" >0.3370</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row4" class="row_heading level0 row4" >qda</th>
+      <td id="T_a6f80_row4_col0" class="data row4 col0" >Quadratic Discriminant Analysis</td>
+      <td id="T_a6f80_row4_col1" class="data row4 col1" >0.8345</td>
+      <td id="T_a6f80_row4_col2" class="data row4 col2" >0.8736</td>
+      <td id="T_a6f80_row4_col3" class="data row4 col3" >0.8829</td>
+      <td id="T_a6f80_row4_col4" class="data row4 col4" >0.7622</td>
+      <td id="T_a6f80_row4_col5" class="data row4 col5" >0.8174</td>
+      <td id="T_a6f80_row4_col6" class="data row4 col6" >0.6676</td>
+      <td id="T_a6f80_row4_col7" class="data row4 col7" >0.6749</td>
+      <td id="T_a6f80_row4_col8" class="data row4 col8" >0.0470</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row5" class="row_heading level0 row5" >knn</th>
+      <td id="T_a6f80_row5_col0" class="data row5 col0" >K Neighbors Classifier</td>
+      <td id="T_a6f80_row5_col1" class="data row5 col1" >0.8331</td>
+      <td id="T_a6f80_row5_col2" class="data row5 col2" >0.8828</td>
+      <td id="T_a6f80_row5_col3" class="data row5 col3" >0.8619</td>
+      <td id="T_a6f80_row5_col4" class="data row5 col4" >0.7710</td>
+      <td id="T_a6f80_row5_col5" class="data row5 col5" >0.8129</td>
+      <td id="T_a6f80_row5_col6" class="data row5 col6" >0.6633</td>
+      <td id="T_a6f80_row5_col7" class="data row5 col7" >0.6681</td>
+      <td id="T_a6f80_row5_col8" class="data row5 col8" >0.1070</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row6" class="row_heading level0 row6" >ada</th>
+      <td id="T_a6f80_row6_col0" class="data row6 col0" >Ada Boost Classifier</td>
+      <td id="T_a6f80_row6_col1" class="data row6 col1" >0.8286</td>
+      <td id="T_a6f80_row6_col2" class="data row6 col2" >0.8770</td>
+      <td id="T_a6f80_row6_col3" class="data row6 col3" >0.8154</td>
+      <td id="T_a6f80_row6_col4" class="data row6 col4" >0.7854</td>
+      <td id="T_a6f80_row6_col5" class="data row6 col5" >0.7993</td>
+      <td id="T_a6f80_row6_col6" class="data row6 col6" >0.6498</td>
+      <td id="T_a6f80_row6_col7" class="data row6 col7" >0.6512</td>
+      <td id="T_a6f80_row6_col8" class="data row6 col8" >0.1740</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row7" class="row_heading level0 row7" >nb</th>
+      <td id="T_a6f80_row7_col0" class="data row7 col0" >Naive Bayes</td>
+      <td id="T_a6f80_row7_col1" class="data row7 col1" >0.8182</td>
+      <td id="T_a6f80_row7_col2" class="data row7 col2" >0.8730</td>
+      <td id="T_a6f80_row7_col3" class="data row7 col3" >0.8161</td>
+      <td id="T_a6f80_row7_col4" class="data row7 col4" >0.7665</td>
+      <td id="T_a6f80_row7_col5" class="data row7 col5" >0.7896</td>
+      <td id="T_a6f80_row7_col6" class="data row7 col6" >0.6300</td>
+      <td id="T_a6f80_row7_col7" class="data row7 col7" >0.6323</td>
+      <td id="T_a6f80_row7_col8" class="data row7 col8" >0.0810</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row8" class="row_heading level0 row8" >svm</th>
+      <td id="T_a6f80_row8_col0" class="data row8 col0" >SVM - Linear Kernel</td>
+      <td id="T_a6f80_row8_col1" class="data row8 col1" >0.8153</td>
+      <td id="T_a6f80_row8_col2" class="data row8 col2" >0.0000</td>
+      <td id="T_a6f80_row8_col3" class="data row8 col3" >0.7770</td>
+      <td id="T_a6f80_row8_col4" class="data row8 col4" >0.7844</td>
+      <td id="T_a6f80_row8_col5" class="data row8 col5" >0.7773</td>
+      <td id="T_a6f80_row8_col6" class="data row8 col6" >0.6198</td>
+      <td id="T_a6f80_row8_col7" class="data row8 col7" >0.6243</td>
+      <td id="T_a6f80_row8_col8" class="data row8 col8" >0.0830</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row9" class="row_heading level0 row9" >et</th>
+      <td id="T_a6f80_row9_col0" class="data row9 col0" >Extra Trees Classifier</td>
+      <td id="T_a6f80_row9_col1" class="data row9 col1" >0.8108</td>
+      <td id="T_a6f80_row9_col2" class="data row9 col2" >0.8640</td>
+      <td id="T_a6f80_row9_col3" class="data row9 col3" >0.7628</td>
+      <td id="T_a6f80_row9_col4" class="data row9 col4" >0.7850</td>
+      <td id="T_a6f80_row9_col5" class="data row9 col5" >0.7708</td>
+      <td id="T_a6f80_row9_col6" class="data row9 col6" >0.6102</td>
+      <td id="T_a6f80_row9_col7" class="data row9 col7" >0.6135</td>
+      <td id="T_a6f80_row9_col8" class="data row9 col8" >0.4150</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row10" class="row_heading level0 row10" >rf</th>
+      <td id="T_a6f80_row10_col0" class="data row10 col0" >Random Forest Classifier</td>
+      <td id="T_a6f80_row10_col1" class="data row10 col1" >0.8093</td>
+      <td id="T_a6f80_row10_col2" class="data row10 col2" >0.8856</td>
+      <td id="T_a6f80_row10_col3" class="data row10 col3" >0.7664</td>
+      <td id="T_a6f80_row10_col4" class="data row10 col4" >0.7799</td>
+      <td id="T_a6f80_row10_col5" class="data row10 col5" >0.7708</td>
+      <td id="T_a6f80_row10_col6" class="data row10 col6" >0.6079</td>
+      <td id="T_a6f80_row10_col7" class="data row10 col7" >0.6107</td>
+      <td id="T_a6f80_row10_col8" class="data row10 col8" >0.3630</td>
+    </tr>
+    <tr>
+      <th id="T_a6f80_level0_row11" class="row_heading level0 row11" >dt</th>
+      <td id="T_a6f80_row11_col0" class="data row11 col0" >Decision Tree Classifier</td>
+      <td id="T_a6f80_row11_col1" class="data row11 col1" >0.7974</td>
+      <td id="T_a6f80_row11_col2" class="data row11 col2" >0.7888</td>
+      <td id="T_a6f80_row11_col3" class="data row11 col3" >0.7346</td>
+      <td id="T_a6f80_row11_col4" class="data row11 col4" >0.7739</td>
+      <td id="T_a6f80_row11_col5" class="data row11 col5" >0.7528</td>
+      <td id="T_a6f80_row11_col6" class="data row11 col6" >0.5815</td>
+      <td id="T_a6f80_row11_col7" class="data row11 col7" >0.5830</td>
+      <td id="T_a6f80_row11_col8" class="data row11 col8" >0.1020</td>
+    </tr>
+  </tbody>
+</table>
+</div><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9f37f44b63d44b80b88f07178923b1b5"}</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-19-ba9a85e8f6ac&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Langkah 5:Bandingkan model dan cari yang terbaik</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">best_model</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">best_model</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/utils/generic.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">963</span>                 <span class="k">if</span> <span class="n">globals_d</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">964</span>                     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">965</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">966</span> 
+<span class="g g-Whitespace">    </span><span class="mi">967</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/classification/functional.py</span> in <span class="ni">compare_models</span><span class="nt">(include, exclude, fold, round, cross_validation, sort, n_select, budget_time, turbo, errors, fit_kwargs, groups, experiment_custom_tags, probability_threshold, engine, verbose, parallel)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">813</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">814</span><span class="s2">     return _CURRENT_EXPERIMENT.compare_models(</span>
+<span class="g g-Whitespace">    </span><span class="mi">815</span><span class="s2">         include=include,</span>
+<span class="g g-Whitespace">    </span><span class="mi">816</span><span class="s2">         exclude=exclude,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/classification/oop.py</span> in <span class="ni">compare_models</span><span class="nt">(self, include, exclude, fold, round, cross_validation, sort, n_select, budget_time, turbo, errors, fit_kwargs, groups, experiment_custom_tags, probability_threshold, engine, verbose, parallel)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span><span class="s2">         try:</span>
+<span class="ne">-&gt; </span><span class="mi">1180</span><span class="s2">             return_values = super().compare_models(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span><span class="s2">                 include=include,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span><span class="s2">                 exclude=exclude,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/internal/pycaret_experiment/supervised_experiment.py</span> in <span class="ni">compare_models</span><span class="nt">(self, include, exclude, fold, round, cross_validation, sort, n_select, budget_time, turbo, errors, fit_kwargs, groups, experiment_custom_tags, probability_threshold, verbose, parallel, caller_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">794</span><span class="s2">                 model, model_fit_time = self._create_model(**create_model_args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span><span class="s2">                 model_results = self.pull(pop=True)</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span><span class="s2">                 assert (</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/internal/pycaret_experiment/supervised_experiment.py</span> in <span class="ni">_create_model</span><span class="nt">(self, estimator, fold, round, cross_validation, predict, fit_kwargs, groups, refit, probability_threshold, experiment_custom_tags, verbose, system, add_to_model_list, X_train_data, y_train_data, metrics, display, model_only, return_train_score, error_score, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1531</span><span class="s2">             return model</span>
+<span class="g g-Whitespace">   </span><span class="mi">1532</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">1533</span><span class="s2">         model, model_fit_time, model_results, _ = self._create_model_with_cv(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1534</span><span class="s2">             model=model,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1535</span><span class="s2">             data_X=data_X,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pycaret/internal/pycaret_experiment/supervised_experiment.py</span> in <span class="ni">_create_model_with_cv</span><span class="nt">(self, model, data_X, data_y, fit_kwargs, round, cv, groups, metrics, refit, system, display, error_score, return_train_score)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1124</span><span class="s2">                 model_fit_start = time.time()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1125</span><span class="s2">                 with redirect_output(self.logger):</span>
+<span class="ne">-&gt; </span><span class="mi">1126</span><span class="s2">                     scores = cross_validate(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1127</span><span class="s2">                         pipeline_with_model,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span><span class="s2">                         data_X,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/model_selection/_validation.py</span> in <span class="ni">cross_validate</span><span class="nt">(estimator, X, y, groups, scoring, cv, n_jobs, verbose, fit_params, pre_dispatch, return_train_score, return_estimator, error_score)</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span><span class="s2">     # independent, and that it is pickle-able.</span>
+<span class="g g-Whitespace">    </span><span class="mi">265</span><span class="s2">     parallel = Parallel(n_jobs=n_jobs, verbose=verbose, pre_dispatch=pre_dispatch)</span>
+<span class="ne">--&gt; </span><span class="mi">266</span><span class="s2">     results = parallel(</span>
+<span class="g g-Whitespace">    </span><span class="mi">267</span><span class="s2">         delayed(_fit_and_score)(</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span><span class="s2">             clone(estimator),</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self, iterable)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">             for delayed_func, args, kwargs in iterable</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2">         )</span>
+<span class="ne">---&gt; </span><span class="mi">63</span><span class="s2">         return super().__call__(iterable_with_config)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self, iterable)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1950</span><span class="s2">         next(output)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1951</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">1952</span><span class="s2">         return output if self.return_generator else list(output)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1953</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1954</span><span class="s2">     def __repr__(self):</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/joblib/parallel.py</span> in <span class="ni">_get_outputs</span><span class="nt">(self, iterator, pre_dispatch)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1593</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1594</span><span class="s2">             with self._backend.retrieval_context():</span>
+<span class="ne">-&gt; </span><span class="mi">1595</span><span class="s2">                 yield from self._retrieve()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1596</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1597</span><span class="s2">         except GeneratorExit:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/joblib/parallel.py</span> in <span class="ni">_retrieve</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1705</span><span class="s2">                 (self._jobs[0].get_status(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1706</span><span class="s2">                     timeout=self.timeout) == TASK_PENDING)):</span>
+<span class="ne">-&gt; </span><span class="mi">1707</span><span class="s2">                 time.sleep(0.01)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1708</span><span class="s2">                 continue</span>
+<span class="g g-Whitespace">   </span><span class="mi">1709</span><span class="s2"> </span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesuai code diatas, maka model terbaik untuk klasifikasi glioma adalah menggunakan Ridge Classifier Model dengan akurasi sebesar 0.86</p>
+<p><strong>Modelling Menggunakan Ridge Classifier</strong></p>
+<p>Ridge Classifier adalah salah satu metode klasifikasi yang termasuk dalam keluarga regularized linear models. Ini merupakan variasi dari regresi ridge yang digunakan untuk masalah klasifikasi. Regresi ridge dan Ridge Classifier sama-sama menggunakan regularisasi untuk mengatasi masalah multikolinearitas dan meningkatkan generalisasi model.</p>
+<p>Ridge Classifier meminimalkan fungsi objektif yang terdiri dari dua bagian: bagian pertama adalah fungsi kerugian (loss function) yang mengukur kesalahan prediksi model, dan bagian kedua adalah regularisasi yang menekan nilai-nilai parameter agar tidak terlalu besar. Secara umum, fungsi objektif Ridge Classifier dapat dituliskan sebagai berikut:</p>
+<p><img alt="Screenshot 2023-11-27 074300.png" src="data:image/png;base64,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" /></p>
+<p>Di sini:</p>
+<ul class="simple">
+<li><p>(w) adalah vektor parameter yang ingin diestimasi.</p></li>
+<li><p>(X) adalah matriks fitur dari data pelatihan.</p></li>
+<li><p>(y) adalah vektor target dari data pelatihan.</p></li>
+<li><p>(alpha) adalah parameter regularisasi yang mengontrol seberapa kuat efek regularisasi.</p></li>
+</ul>
+<p>Proses optimasi Ridge Classifier melibatkan mencari nilai parameter (w) yang meminimalkan fungsi objektif di atas. Ini biasanya dilakukan menggunakan teknik optimasi seperti gradien turun (gradient descent) atau solusi tertutup (closed-form solution).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split data</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">8756</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Training Data</span>
+<span class="n">ridge_classifier</span> <span class="o">=</span> <span class="n">RidgeClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy_X</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                   <span class="n">max_iter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">8756</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+                                   <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span>
+<span class="n">ridge_classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-6 {color: black;background-color: white;}#sk-container-id-6 pre{padding: 0;}#sk-container-id-6 div.sk-toggleable {background-color: white;}#sk-container-id-6 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-6 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-6 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-6 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-6 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-6 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-6 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-6 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-6 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-6 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-6 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-6 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-6 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-6 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-6 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-6 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-6 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-6 div.sk-item {position: relative;z-index: 1;}#sk-container-id-6 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-6 div.sk-item::before, #sk-container-id-6 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-6 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-6 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-6 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-6 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-6 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-6 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-6 div.sk-label-container {text-align: center;}#sk-container-id-6 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-6 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-6" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=8756, solver=&#x27;auto&#x27;,
+                tol=0.0001)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" checked><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">RidgeClassifier</label><div class="sk-toggleable__content"><pre>RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=8756, solver=&#x27;auto&#x27;,
+                tol=0.0001)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat Prediksi Data Testing</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">ridge_classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Evaluasi</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evaluasi Akurasi</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.85
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpan model RC ke dalam file pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;rc_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rc_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ridge_classifier</span><span class="p">,</span> <span class="n">rc_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Aplikasi Streamlit</strong></p>
+<p>Link akses aplikasi : <a class="reference external" href="https://klasifikasi-tumor-otak.streamlit.app/">Aplikasi Klasifikasi Tumor Otak</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="21-187ROBIATULADAWIYAH.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Klasifikasi Emosi Audio</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">Deskripsi Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-fitur">Penjelasan Fitur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">Eksplorasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

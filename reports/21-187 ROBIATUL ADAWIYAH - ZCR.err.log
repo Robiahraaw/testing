@@ -1,0 +1,124 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Loop melalui setiap file audio
+for audio_file in audio_files:
+    # Membaca file audio
+    y, sr = librosa.load(audio_file, sr=None)
+
+    # Menghitung ZCR
+    zcr = librosa.feature.zero_crossing_rate(y)
+
+    # Menghitung statistik ZCR
+    zcr_mean = np.mean(zcr)
+    zcr_median = np.median(zcr)
+    zcr_std = np.std(zcr)
+
+    # Menghitung kurtosis dan skewness
+    kurt = kurtosis(zcr.ravel())
+    skewness = skew(zcr.ravel())
+
+    # Menambahkan statistik ZCR ke dalam list
+    zcr_mean_values.append(zcr_mean)
+    zcr_median_values.append(zcr_median)
+    zcr_std_values.append(zcr_std)
+    kurtosis_values.append(kurt)
+    skewness_values.append(skewness)
+------------------
+
+----- stderr -----
+<ipython-input-5-afd7aeac415b>:4: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, sr = librosa.load(audio_file, sr=None)
+/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py:183: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mLibsndfileError[0m                           Traceback (most recent call last)
+[0;32m/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py[0m in [0;36mload[0;34m(path, sr, mono, offset, duration, dtype, res_type)[0m
+[1;32m    174[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 175[0;31m             [0my[0m[0;34m,[0m [0msr_native[0m [0;34m=[0m [0m__soundfile_load[0m[0;34m([0m[0mpath[0m[0;34m,[0m [0moffset[0m[0;34m,[0m [0mduration[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    176[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py[0m in [0;36m__soundfile_load[0;34m(path, offset, duration, dtype)[0m
+[1;32m    207[0m         [0;31m# Otherwise, create the soundfile object[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 208[0;31m         [0mcontext[0m [0;34m=[0m [0msf[0m[0;34m.[0m[0mSoundFile[0m[0;34m([0m[0mpath[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    209[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/soundfile.py[0m in [0;36m__init__[0;34m(self, file, mode, samplerate, channels, subtype, endian, format, closefd)[0m
+[1;32m    657[0m                                          format, subtype, endian)
+[0;32m--> 658[0;31m         [0mself[0m[0;34m.[0m[0m_file[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_open[0m[0;34m([0m[0mfile[0m[0;34m,[0m [0mmode_int[0m[0;34m,[0m [0mclosefd[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    659[0m         [0;32mif[0m [0mset[0m[0;34m([0m[0mmode[0m[0;34m)[0m[0;34m.[0m[0missuperset[0m[0;34m([0m[0;34m'r+'[0m[0;34m)[0m [0;32mand[0m [0mself[0m[0;34m.[0m[0mseekable[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/soundfile.py[0m in [0;36m_open[0;34m(self, file, mode_int, closefd)[0m
+[1;32m   1215[0m             [0merr[0m [0;34m=[0m [0m_snd[0m[0;34m.[0m[0msf_error[0m[0;34m([0m[0mfile_ptr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1216[0;31m             [0;32mraise[0m [0mLibsndfileError[0m[0;34m([0m[0merr[0m[0;34m,[0m [0mprefix[0m[0;34m=[0m[0;34m"Error opening {0!r}: "[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mname[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1217[0m         [0;32mif[0m [0mmode_int[0m [0;34m==[0m [0m_snd[0m[0;34m.[0m[0mSFM_WRITE[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mLibsndfileError[0m: Error opening 'a01.wav': System error.
+
+During handling of the above exception, another exception occurred:
+
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m<ipython-input-5-afd7aeac415b>[0m in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      2[0m [0;32mfor[0m [0maudio_file[0m [0;32min[0m [0maudio_files[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m     [0;31m# Membaca file audio[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 4[0;31m     [0my[0m[0;34m,[0m [0msr[0m [0;34m=[0m [0mlibrosa[0m[0;34m.[0m[0mload[0m[0;34m([0m[0maudio_file[0m[0;34m,[0m [0msr[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;34m[0m[0m
+[1;32m      6[0m     [0;31m# Menghitung ZCR[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py[0m in [0;36mload[0;34m(path, sr, mono, offset, duration, dtype, res_type)[0m
+[1;32m    181[0m                     [0;34m"PySoundFile failed. Trying audioread instead."[0m[0;34m,[0m [0mstacklevel[0m[0;34m=[0m[0;36m2[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    182[0m                 )
+[0;32m--> 183[0;31m                 [0my[0m[0;34m,[0m [0msr_native[0m [0;34m=[0m [0m__audioread_load[0m[0;34m([0m[0mpath[0m[0;34m,[0m [0moffset[0m[0;34m,[0m [0mduration[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    184[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    185[0m                 [0;32mraise[0m [0mexc[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<decorator-gen-119>[0m in [0;36m__audioread_load[0;34m(path, offset, duration, dtype)[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/librosa/util/decorators.py[0m in [0;36m__wrapper[0;34m(func, *args, **kwargs)[0m
+[1;32m     57[0m             [0mstacklevel[0m[0;34m=[0m[0;36m3[0m[0;34m,[0m  [0;31m# Would be 2, but the decorator adds a level[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     58[0m         )
+[0;32m---> 59[0;31m         [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     60[0m [0;34m[0m[0m
+[1;32m     61[0m     [0;32mreturn[0m [0mdecorator[0m[0;34m([0m[0m__wrapper[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/librosa/core/audio.py[0m in [0;36m__audioread_load[0;34m(path, offset, duration, dtype)[0m
+[1;32m    237[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    238[0m         [0;31m# If the input was not an audioread object, try to open it[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 239[0;31m         [0mreader[0m [0;34m=[0m [0maudioread[0m[0;34m.[0m[0maudio_open[0m[0;34m([0m[0mpath[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    240[0m [0;34m[0m[0m
+[1;32m    241[0m     [0;32mwith[0m [0mreader[0m [0;32mas[0m [0minput_file[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/audioread/__init__.py[0m in [0;36maudio_open[0;34m(path, backends)[0m
+[1;32m    125[0m     [0;32mfor[0m [0mBackendClass[0m [0;32min[0m [0mbackends[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    126[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 127[0;31m             [0;32mreturn[0m [0mBackendClass[0m[0;34m([0m[0mpath[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    128[0m         [0;32mexcept[0m [0mDecodeError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    129[0m             [0;32mpass[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/audioread/rawread.py[0m in [0;36m__init__[0;34m(self, filename)[0m
+[1;32m     57[0m     """
+[1;32m     58[0m     [0;32mdef[0m [0m__init__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mfilename[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 59[0;31m         [0mself[0m[0;34m.[0m[0m_fh[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0mfilename[0m[0;34m,[0m [0;34m'rb'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     60[0m [0;34m[0m[0m
+[1;32m     61[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'a01.wav'
+
